@@ -94,7 +94,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white">
+    <section id="contact" className="py-24 bg-gradient-to-r from-secondary/70 to-primary/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -104,10 +104,10 @@ export default function ContactForm() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 mb-6">
+              <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Partner With Us on the Future of Medicine
               </h2>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="text-lg text-white mb-8">
                 Whether you're looking to join our team or collaborate on research, we're excited to connect with fellow innovators.
               </p>
               
@@ -118,8 +118,8 @@ export default function ContactForm() {
                     <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-800 mb-1">Meet With Us</h3>
-                    <p className="text-slate-600">
+                    <h3 className="font-['Space_Grotesk'] font-semibold text-white mb-1">Meet With Us</h3>
+                    <p className="text-white">
                       {contactInfo.address.split('\n').map((line, i) => (
                         <span key={i}>{line}<br /></span>
                       ))}
@@ -133,8 +133,8 @@ export default function ContactForm() {
                     <FontAwesomeIcon icon={faEnvelope} className="text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-800 mb-1">Email Us</h3>
-                    <p className="text-slate-600">
+                    <h3 className="font-['Space_Grotesk'] font-semibold text-white mb-1">Email Us</h3>
+                    <p className="text-white">
                       <a href={`mailto:${contactInfo.email.general}`} className="hover:text-secondary transition-colors">{contactInfo.email.general}</a>
                     </p>
                   </div>
