@@ -58,7 +58,7 @@ export default function Hero() {
             <div className="relative">
               <div className="w-full h-72 sm:h-96 md:h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="/images/hero-placeholder.png" // Updated placeholder path
+                  src="/images/2bxg_v4.png"
                   alt="Protein structure with small molecule" 
                   className="w-full h-full object-cover"
                 />

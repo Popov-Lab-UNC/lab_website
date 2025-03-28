@@ -37,7 +37,7 @@ export const teamMembers = [
   {
     name: "Konstantin Popov, PhD",
     role: "Principal Investigator",
-    bio: "Associate Professor, Department of Biochemistry & Biophysics at UNC Chapel Hill.",
+    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. With a quiet and kind demeanor guided by principles, he is the major driver and strategist for the lab's research. He is known for his dedication and enthusiasm, whether for nurturing students or sharing breakthroughs with colleagues.",
     image: "/images/kpopov.jpg",
     color: "primary",
     github: "",
@@ -45,8 +45,8 @@ export const teamMembers = [
   },
   {
     name: "James Wellnitz",
-    role: "PhD Student",
-    bio: "Focused on computational drug discovery methods and virtual screening.",
+    role: "PhD Candidate",
+    bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
     image: "/images/jwellnitz.jpg",
     color: "secondary",
     github: "https://github.com/jimmyjbling",
@@ -54,8 +54,8 @@ export const teamMembers = [
   },
   {
     name: "Brandon Novy",
-    role: "PhD Student",
-    bio: "Specializes in computational drug discovery and molecular modeling.",
+    role: "PhD Candidate",
+    bio: "A wet-lab-scientist-turned-computationalist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker who dives deep into research and a generous mentor who prioritizes others' growth. He thrives in collaborative spaces, balancing his sociability with thoughtful independence, ensuring his colleagues feel supported and inspired.",
     image: "/images/novy.jpg",
     color: "secondary",
     github: "https://github.com/Brandon-Cole",
