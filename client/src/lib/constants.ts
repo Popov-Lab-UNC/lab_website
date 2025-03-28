@@ -64,7 +64,7 @@ export const teamMembers = [
   {
     name: "Shu-Hang (Jason) Lin",
     role: "PhD Student",
-    bio: "Jason graduated from the University of Michigan with a B.S. in Chemical Engineering in 2023. He is interested in designing algorithms that can propose novel and promising molecules for drug discovery.",
+    bio: "Jason grew up wanting to become a treasure hunter, and he views working in drug discovery as a decent substitute. He finds great fulfillment in learning across disciplines and hobbies to become a well-rounded individual. He loves food and wants to make money so that he can travel the world and eat.",
     image: "/images/shuhang.jpg",
     color: "secondary",
     github: "https://github.com/jasonlin90125",
