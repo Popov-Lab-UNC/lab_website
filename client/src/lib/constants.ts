@@ -75,6 +75,17 @@ export const teamMembers = [
 // Publications
 export const publications = [
   {
+    title: "Open-Source DNA-Encoded Library Package for Design, Decoding and Analysis: DELi",
+    authors: "Wellnitz J, Novy B, Maxfield T, Zhilinskaya I, Lin SH, Axtman M, Leisner T, Norris-Drouin JL, Hardy BP, Pearce KH, Popov KI.",
+    journal: "BioRxiv",
+    year: "2025",
+    tags: ["Tool Development", "Collaborative Drug Discovery"],
+    color: "primary",
+    link: "https://www.biorxiv.org/content/10.1101/2025.02.25.640184v1",
+    doi: "10.1101/2025.02.25.640184v1",
+    isPreprint: true,
+  },
+  {
     title: "Development of a Second-Generation, In Vivo Chemical Probe for PIKfyve",
     authors: "Min SM, Bashore FM, Smith JL, Havener TM, Howell S, Li H, Couñago RM, Popov KI, Axtman AD.",
     journal: "Journal of Medicinal Chemistry",
@@ -105,27 +116,6 @@ export const publications = [
     doi: "10.1021/acs.jmedchem.4c01346",
   },
   {
-    title: "An Improved Metric and Benchmark for Assessing the Performance of Virtual Screening Models",
-    authors: "Brocidiacono M, Popov KI, Tropsha A.",
-    journal: "ArXiv [Preprint]",
-    year: "2024",
-    tags: ["Virtual Screening", "Tool Development"],
-    color: "warning",
-    link: "https://arxiv.org/html/2403.10478v1",
-    doi: "2403.10478v1",
-    isPreprint: true
-  },
-  {
-    title: "STOPLIGHT: A Hit Scoring Calculator",
-    authors: "Wellnitz J, Martin H, Hossain MA, Rath M, Fox C, Popov KI, Willson TM, et al.",
-    journal: "Journal of Chemical Information and Modeling",
-    year: "2024",
-    tags: ["Virtual Screening", "Tool Development"],
-    color: "success",
-    link: "https://pubs.acs.org/doi/10.1021/acs.jcim.4c00412",
-    doi: "10.1021/acs.jcim.4c00412",
-  },
-  {
     title: "Synthesis of 5-Benzylamino and 5-Alkylamino-Substituted Pyrimido[4,5-c]quinoline Derivatives as CSNK2A Inhibitors with Antiviral Activity",
     authors: "Asressu KH, Smith JL, Dickmander RJ, Moorman NJ, Wellnitz J, Popov KI, Axtman AD, Willson TM.",
     journal: "Pharmaceuticals",
@@ -147,59 +137,29 @@ export const publications = [
   },
 ];
 
-// Process Steps
-export const processSteps = [
-  {
-    phase: "Phase 1",
-    title: "Target Identification",
-    description: "Using genomics and proteomics to identify disease-relevant biological targets.",
-    icon: "bullseye",
-    color: "primary",
-  },
-  {
-    phase: "Phase 2",
-    title: "Hit Discovery",
-    description: "AI-powered screening of compound libraries to find promising starting points.",
-    icon: "flask",
-    color: "secondary",
-  },
-  {
-    phase: "Phase 3",
-    title: "Lead Optimization",
-    description: "Refining molecular structures to improve potency, selectivity, and properties.",
-    icon: "microscope",
-    color: "accent",
-  },
-  {
-    phase: "Phase 4",
-    title: "Preclinical Testing",
-    description: "Validating safety and efficacy through advanced in vitro and in vivo studies.",
-    icon: "vials",
-    color: "success",
-  },
-];
-
-// Advanced Development Stages
-export const advancedStages = [
-  {
-    title: "Clinical Trials",
-    description: "Rigorous testing in humans to confirm safety, efficacy, and dosing.",
-    icon: "clipboard-check",
+{/*
+    {
+    title: "An Improved Metric and Benchmark for Assessing the Performance of Virtual Screening Models",
+    authors: "Brocidiacono M, Popov KI, Tropsha A.",
+    journal: "ArXiv",
+    year: "2024",
+    tags: ["Virtual Screening", "Tool Development"],
     color: "warning",
+    link: "https://arxiv.org/html/2403.10478v1",
+    doi: "2403.10478v1",
+    isPreprint: true
   },
   {
-    title: "Regulatory Approval",
-    description: "Navigating regulatory pathways to bring treatments to market.",
-    icon: "file-signature",
-    color: "primary",
+    title: "STOPLIGHT: A Hit Scoring Calculator",
+    authors: "Wellnitz J, Martin H, Hossain MA, Rath M, Fox C, Popov KI, Willson TM, et al.",
+    journal: "Journal of Chemical Information and Modeling",
+    year: "2024",
+    tags: ["Virtual Screening", "Tool Development"],
+    color: "success",
+    link: "https://pubs.acs.org/doi/10.1021/acs.jcim.4c00412",
+    doi: "10.1021/acs.jcim.4c00412",
   },
-  {
-    title: "Commercial Production",
-    description: "Scaling manufacturing and distribution to reach patients worldwide.",
-    icon: "chart-line",
-    color: "secondary",
-  },
-];
+*/}
 
 // Contact Info
 export const contactInfo = {

@@ -106,8 +106,7 @@ export default function Publications() {
           ))}
           
           <div className="text-center mt-10">
-            {/* Link to a full publications page or CV if available */}
-            <a href="#" className="inline-flex items-center text-primary hover:underline text-lg font-medium">
+            <a href="#" className="inline-flex items-center text-primary hover:text-primary/80 hover:underline text-lg font-medium">
               View All Publications
               <i className="fas fa-arrow-right ml-2"></i>
             </a>

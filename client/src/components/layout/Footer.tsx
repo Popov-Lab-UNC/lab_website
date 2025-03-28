@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-400">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:max-w-5xl mx-auto">
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-12 h-10 rounded-lg bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
@@ -87,7 +87,7 @@ export default function Footer() {
           */}
         </div>
         
-        <p className="text-sm">© {new Date().getFullYear()} The BIND Lab. All rights reserved.</p>
+        <p className="text-sm text-center mt-12">© {new Date().getFullYear()} The BIND Lab. All rights reserved.</p>
       </div>
     </footer>
   );

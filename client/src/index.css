@@ -1,57 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 70px;
   }
-
-  :root {
-    --background: hsl(0 0% 100%); /* Default light background */
-    --foreground: hsl(20 14.3% 4.1%); /* Default light foreground */
-
-    --card: hsl(0 0% 100%);
-    --card-foreground: hsl(20 14.3% 4.1%);
-
-    --popover: hsl(0 0% 100%);
-    --popover-foreground: hsl(20 14.3% 4.1%);
-
-    /* --- YOUR THEME COLORS --- */
-    /* These HSL values MUST match your theme.json */
-    --primary: 14 83% 60%;
-    --primary-foreground: 14 100% 99%; /* Assuming white/light text for orange */
-
-    --secondary: 252 100% 76%;
-    --secondary-foreground: 252 100% 98%; /* Assuming very light text for purple */
-    /* --- END YOUR THEME COLORS --- */
-
-    --muted: hsl(60 4.8% 95.9%);
-    --muted-foreground: hsl(25 5.3% 44.7%);
-
-    --accent: hsl(60 4.8% 95.9%); /* Default - update if needed */
-    --accent-foreground: hsl(24 9.8% 10%); /* Default - update if needed */
-
-    --destructive: hsl(0 84.2% 60.2%); /* Default */
-    --destructive-foreground: hsl(60 9.1% 97.8%); /* Default */
-
-    --border: hsl(20 5.9% 90%);
-    --input: hsl(20 5.9% 90%);
-    --ring: hsl(14, 83%, 60%); /* Use primary color for ring */
-
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  :root {
+    /* --- YOUR THEME COLORS --- */
+    --secondary: 252 100% 76%;
+    --secondary-foreground: 252 100% 98%; /* Assuming very light text for purple */
+    /* --- END YOUR THEME COLORS --- */
   }
 }
