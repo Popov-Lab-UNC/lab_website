@@ -35,7 +35,7 @@ export const teamMembers = [
   {
     name: "Konstantin Popov, PhD",
     role: "Principal Investigator",
-    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. With a quiet and kind demeanor guided by principles, he is the major driver and strategist for the lab's research. He is known for his dedication and enthusiasm, whether for nurturing students or sharing breakthroughs with colleagues.",
+    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research. He is known for his dedication and enthusiasm, whether for mentoring students or sharing breakthroughs with colleagues.",
     image: "/images/kpopov.jpg",
     color: "primary",
     github: "",
@@ -53,7 +53,7 @@ export const teamMembers = [
   {
     name: "Brandon Novy",
     role: "PhD Candidate",
-    bio: "A wet-lab-scientist-turned-computationalist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker who dives deep into research and a generous mentor who prioritizes others' growth. He thrives in collaborative spaces, balancing his sociability with thoughtful independence, ensuring his colleagues feel supported and inspired.",
+    bio: "A wet-lab-scientist-turned-computationalist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker who dives deep into research and a generous mentor who prioritizes others' growth. He thrives in collaborative spaces, balancing his sociability with thoughtful independence.",
     image: "/images/novy.jpg",
     color: "secondary",
     github: "https://github.com/Brandon-Cole",
