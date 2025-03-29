@@ -51,7 +51,7 @@ export default function ResearchAreas() {
         >
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 mb-4">Our Research Areas</h2>
           <p className="text-lg text-slate-600 max-w-xl mx-auto">
-            Exploring innovative approaches to drug discovery
+            Learn about our approach to drug discovery
           </p>
         </motion.div>
         

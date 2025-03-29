@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="font-['Space_Grotesk'] font-semibold text-xl text-white">The BIND Lab</span>
             </div>
             <p className="mb-6">
-              Pioneering the future of biophysics and informatics for drug discovery.
+              Shaping the future of biophysics and informatics for drug discovery.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
