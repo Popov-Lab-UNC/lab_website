@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { researchAreas } from "@/lib/constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRobot, faDna, faCapsules, faAtom } from "@fortawesome/free-solid-svg-icons";
 
 export default function ResearchAreas() {
   const container = {
@@ -26,9 +28,15 @@ export default function ResearchAreas() {
     //warning: { bg: "bg-[#F59E0B]/10", text: "text-[#F59E0B]", hover: "group-hover:text-[#F59E0B]" },
     primary: { bg: "bg-primary/10", text: "text-primary", hover: "group-hover:text-primary" }, // Orange
     secondary: { bg: "bg-secondary/10", text: "text-secondary", hover: "group-hover:text-secondary" }, // Purple
-    accent: { bg: "bg-accent/10", text: "text-accent", hover: "group-hover:text-accent" }, // Keep original accent or choose new
+    accent: { bg: "bg-slate-500/10", text: "text-slate-500", hover: "group-hover:text-slate-500" }, // Example: Slate (gray)
     success: { bg: "bg-green-500/10", text: "text-green-500", hover: "group-hover:text-green-500" }, // Example: explicit green
-    warning: { bg: "bg-yellow-500/10", text: "text-yellow-500", hover: "group-hover:text-yellow-500" }, // Example: explicit yellow
+  };
+
+  const iconMap = {
+    robot: faRobot,
+    dna: faDna,
+    capsules: faCapsules,
+    atom: faAtom,
   };
 
   return (
@@ -61,13 +69,14 @@ export default function ResearchAreas() {
               variants={item}
             >
               <div className={`w-14 h-14 rounded-full ${colorMap[area.color].bg} flex items-center justify-center mb-6`}>
-                <i className={`fas fa-${area.icon} ${colorMap[area.color].text} text-xl`}></i>
+                <FontAwesomeIcon icon={iconMap[area.icon]} className={colorMap[area.color].text} />
+                {/*<i className={`fas fa-${area.icon} ${colorMap[area.color].text} text-xl`}></i>*/}
               </div>
               <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-slate-800 mb-3">{area.title}</h3>
               <p className="text-slate-600 mb-4">
                 {area.description}
               </p>
-              <a href="#" className={`${colorMap[area.color].text} font-medium inline-flex items-center group`}>
+              <a href={area.link} className={`${colorMap[area.color].text} font-medium inline-flex items-center group`}>
                 Learn more <i className="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
               </a>
             </motion.div>
