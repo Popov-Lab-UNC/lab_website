@@ -86,18 +86,18 @@ export default function TeamMembers() {
               )}
               variants={item}
             >
-              <div className="h-60 overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-center" // Added object-center
-                />
+              <div className="w-44 h-44 rounded-full overflow-hidden mx-auto mt-6 mb-5 border-2 border-slate-500 shadow-md">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-center" // Added object-center
+                  />
               </div>
-              <div className="p-6">
+              <div className="p-6 pt-0">
                  {/* Change name text color */}
-                <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-white mb-1">{member.name}</h3>
+                <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-center text-white mb-1">{member.name}</h3>
                 {/* Role color remains dynamic */}
-                <p className={`${colorMap[member.color]} font-medium mb-3`}>{member.role}</p>
+                <p className={`${colorMap[member.color]} text-center font-medium mb-3`}>{member.role}</p>
                  {/* Change bio text color */}
                 <p className="text-slate-300 mb-4 text-sm"> {/* Made text slightly smaller, changed color */}
                   {member.bio}

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center text-white pt-16 bg-gradient-to-r from-primary/90 to-secondary">
+    <section id="home" className="min-h-screen flex items-center text-white pt-16 bg-gradient-to-r from-primary to-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
