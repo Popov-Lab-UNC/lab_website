@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center text-white pt-16 bg-gradient-to-r from-primary to-secondary">
+    <section id="home" className="min-h-screen flex items-center text-white pt-16 bg-gradient-to-r from-primary/80 to-secondary">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
@@ -12,10 +12,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
-              The <span className="text-secondary">BIND</span> Lab: Biophysics and Informatics for Drug Discovery
+            <h1 className="font-['Space_Grotesk'] font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6 text-slate-700">
+              The BIND Lab: Biophysics and Informatics for Drug Discovery
             </h1>
-            <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-xl">
+            <p className="text-2xl sm:text-xl opacity-90 mb-8 max-w-xl text-slate-700">
               Located at the University of North Carolina at Chapel Hill, our lab uses computational approaches to discover new drugs.
             </p>
             <div className="flex flex-wrap gap-4">
