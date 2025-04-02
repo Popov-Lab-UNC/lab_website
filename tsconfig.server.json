@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json", // Keep inheriting base settings
+  "compilerOptions": {
+    "noEmit": true,            // Don't emit JS files, just type check
+  },
+  "include": ["server/**/*", "shared/**/*"], // Keep specifying server/shared files
+  "exclude": ["node_modules", "dist", "client", "dist-tsc"] // Keep excluding other parts
+}

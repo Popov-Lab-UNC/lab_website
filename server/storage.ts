@@ -1,4 +1,4 @@
-import { users, type User, type InsertUser, type Inquiry, type InsertInquiry } from "@shared/schema";
+import { users, type User, type InsertUser, type Inquiry, type InsertInquiry, inquiries } from "@shared/schema";
 
 // Modify the interface with any CRUD methods you might need
 export interface IStorage {
@@ -42,8 +42,14 @@ export class MemStorage implements IStorage {
   async createInquiry(insertInquiry: InsertInquiry): Promise<Inquiry> {
     const id = this.currentInquiryId++;
     const createdAt = new Date().toISOString();
-    const inquiry: Inquiry = { ...insertInquiry, id, createdAt };
+    const inquiry: Inquiry = {
+      ...insertInquiry,
+      id,
+      createdAt,
+      organization: insertInquiry.organization === undefined ? null : insertInquiry.organization,
+    };
     this.inquiries.set(id, inquiry);
+    console.log('Created inquiry (in memory):', inquiry);
     return inquiry;
   }
 
