@@ -94,7 +94,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-r from-secondary/50 to-primary/70">
+    <section id="contact" className="py-24 bg-gradient-to-r from-secondary/20 to-primary/70">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">

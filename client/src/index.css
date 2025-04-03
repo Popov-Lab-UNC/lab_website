@@ -13,11 +13,4 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
-  :root {
-    /* --- YOUR THEME COLORS --- */
-    --secondary: 252 100% 76%;
-    --secondary-foreground: 252 100% 98%; /* Assuming very light text for purple */
-    /* --- END YOUR THEME COLORS --- */
-  }
 }

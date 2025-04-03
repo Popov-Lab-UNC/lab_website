@@ -21,15 +21,10 @@ export default function ResearchAreas() {
 
   // Maps color names to Tailwind classes
   const colorMap: Record<string, { bg: string, text: string, hover: string }> = {
-    //primary: { bg: "bg-[#0062CC]/10", text: "text-[#0062CC]", hover: "group-hover:text-[#0062CC]" },
-    //secondary: { bg: "bg-[#16D6FB]/10", text: "text-[#16D6FB]", hover: "group-hover:text-[#16D6FB]" },
-    //accent: { bg: "bg-[#7209B7]/10", text: "text-[#7209B7]", hover: "group-hover:text-[#7209B7]" },
-    //success: { bg: "bg-[#10B981]/10", text: "text-[#10B981]", hover: "group-hover:text-[#10B981]" },
-    //warning: { bg: "bg-[#F59E0B]/10", text: "text-[#F59E0B]", hover: "group-hover:text-[#F59E0B]" },
-    primary: { bg: "bg-primary/10", text: "text-primary", hover: "group-hover:text-primary" }, // Orange
-    secondary: { bg: "bg-secondary/10", text: "text-secondary", hover: "group-hover:text-secondary" }, // Purple
-    accent: { bg: "bg-slate-500/10", text: "text-slate-500", hover: "group-hover:text-slate-500" }, // Example: Slate (gray)
-    success: { bg: "bg-green-500/10", text: "text-green-500", hover: "group-hover:text-green-500" }, // Example: explicit green
+    primary: { bg: "bg-primary/10", text: "text-primary", hover: "group-hover:text-primary" },
+    secondary: { bg: "bg-secondary/10", text: "text-secondary", hover: "group-hover:text-secondary" },
+    tertiary: { bg: "bg-tertiary/10", text: "text-tertiary", hover: "group-hover:text-tertiary" },
+    quaternary: { bg: "bg-quaternary/10", text: "text-quaternary", hover: "group-hover:text-quaternary" }, 
   };
 
   const iconMap = {

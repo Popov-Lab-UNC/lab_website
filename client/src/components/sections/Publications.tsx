@@ -20,27 +20,19 @@ export default function Publications() {
 
   // Maps color names to classes
   const colorMap: Record<string, { text: string, bg: string }> = {
-    //primary: { text: "text-[#0062CC]", bg: "bg-[#0062CC]/10" },
-    //secondary: { text: "text-[#16D6FB]", bg: "bg-[#16D6FB]/10" },
-    //accent: { text: "text-[#7209B7]", bg: "bg-[#7209B7]/10" },
-    //success: { text: "text-[#10B981]", bg: "bg-[#10B981]/10" },
-    //warning: { text: "text-[#F59E0B]", bg: "bg-[#F59E0B]/10" },
-    primary: { text: "text-primary", bg: "bg-primary/10" }, // Orange
-    secondary: { text: "text-secondary", bg: "bg-secondary/10" }, // Purple
-    accent: { text: "text-slate-500", bg: "bg-slate-500/10" },  // Slate
-    success: { text: "text-green-500", bg: "bg-green-500/10" }, // Green
-    other: {text: "text-blue-500", bg: "bg-blue-500/10" },
+    primary: { text: "text-primary", bg: "bg-primary/10" },
+    secondary: { text: "text-secondary", bg: "bg-secondary/10" },
+    tertiary: { text: "text-tertiary", bg: "bg-tertiary/10" },
+    quaternary: { text: "text-quaternary0", bg: "bg-quaternary/10" },
+    other: {text: "text-slate-500", bg: "bg-slate-500/10" },
   };
-
-  // Color rotation for tags
-  const tagColors = ["primary", "secondary", "accent", "success", "warning"];
 
   // Map specific tags to colors
   const tagColorMap: Record<string, string> = {
     "Virtual Screening": "primary",
     "DEL Technology": "secondary",
-    "Collaborative Drug Discovery": "accent",
-    "Computational Biophysics": "success",
+    "Collaborative Drug Discovery": "tertiary",
+    "Computational Biophysics": "quaternary",
     "Tool Development": "other",
   };
 

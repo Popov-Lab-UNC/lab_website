@@ -19,14 +19,14 @@ export const researchAreas = [
     title: "Collaborative Campaigns",
     description: "Transforming computational insights into experimental validation through partnerships to accelerate the creation of new therapeutic agents.",
     link: "https://cicbdd.web.unc.edu/",
-    color: "accent",
+    color: "tertiary",
   },
   {
     icon: "atom",
     title: "Computational Biophysics",
     description: "Decoding protein motion to characterize allosteric and cryptic binding sites, guiding the rational design of molecules that exploit dynamic biological states.",
     link: "https://pubmed.ncbi.nlm.nih.gov/31283187/",
-    color: "success",
+    color: "quaternary",
   },
 ];
 
@@ -122,16 +122,6 @@ export const publications = [
     link: "https://arxiv.org/html/2403.10478v1",
     doi: "2403.10478v1",
     isPreprint: true
-  },
-  {
-    title: "STOPLIGHT: A Hit Scoring Calculator",
-    authors: "Wellnitz J, Martin H, Hossain MA, Rath M, Fox C, Popov KI, Willson TM, et al.",
-    journal: "Journal of Chemical Information and Modeling",
-    year: "2024",
-    tags: ["Virtual Screening", "Tool Development"],
-    color: "success",
-    link: "https://pubs.acs.org/doi/10.1021/acs.jcim.4c00412",
-    doi: "10.1021/acs.jcim.4c00412",
   },
   {
     title: "Structure Activity of β-Amidomethyl Vinyl Sulfones as Covalent Inhibitors of Chikungunya nsP2 Cysteine Protease with Antialphavirus Activity",

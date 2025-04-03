@@ -26,8 +26,16 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "hsl(149, 38%, 55%)",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        tertiary: {
+          DEFAULT: "hsl(13, 96%, 54%)",
+          foreground: "hsl(var(--tertiary-foreground))",
+        },
+        quaternary: {
+          DEFAULT: "hsl(252 100% 76%)",
+          foreground: "hsl(var(--quaternary-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
