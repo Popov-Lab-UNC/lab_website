@@ -46,7 +46,7 @@ export default function Hero() {
             <div className="relative"> {/* Was: relative max-w-lg mx-auto */}
               <div className="w-full h-72 sm:h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="/images/2bxg_v4.png"
+                  src="/images/3mxf_v1.png"
                   alt="Protein structure with small molecule"
                   className="w-full h-full object-cover"
                 />
