@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { teamMembers, socialLinks } from "@/lib/constants"; // Assuming socialLinks are defined here too
+import { teamMembers, socialLinks } from "@/lib/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faUniversity } from "@fortawesome/free-solid-svg-icons"; // Example solid icon
-import { cn } from "@/lib/utils"; // Import cn if not already
+import { faUniversity, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { cn } from "@/lib/utils";
 
 export default function TeamMembers() {
   const container = {
@@ -21,30 +21,26 @@ export default function TeamMembers() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  // Maps color names to text color classes (Should still work on dark)
   const colorMap: Record<string, string> = {
     primary: "text-primary",
     secondary: "text-secondary",
-    accent: "text-accent",
-    success: "text-green-500",
-    warning: "text-yellow-500",
+    tertiary: "text-tertiary",
+    quaternary: "text-quaternary",
   };
 
-  // Maps color names to hover color classes (Should still work on dark)
   const hoverColorMap: Record<string, string> = {
     primary: "hover:text-primary",
     secondary: "hover:text-secondary",
-    accent: "hover:text-accent",
-    success: "hover:text-green-500",
-    warning: "hover:text-yellow-500",
+    tertiary: "hover:text-tertiary",
+    quaternary: "hover:text-quaternary",
   };
 
-  // Function to get appropriate icon
   const getIcon = (platform: string) => {
     switch (platform) {
       case 'linkedin': return faLinkedinIn;
       case 'github': return faGithub;
-      default: return undefined; // Or a default icon
+      case 'googlescholar': return faGraduationCap
+      default: return undefined;
     }
   }
 
@@ -115,7 +111,11 @@ export default function TeamMembers() {
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   )}
-                   {/* Add more icons based on available data */}
+                  {member.googlescholar && (
+                     <a href={member.googlescholar} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`}>
+                      <FontAwesomeIcon icon={faGraduationCap} />
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

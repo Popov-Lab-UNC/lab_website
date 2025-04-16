@@ -40,6 +40,7 @@ export const teamMembers = [
     color: "primary",
     github: "",
     linkedin: "https://www.linkedin.com/in/konstantin-popov-profile",
+    googlescholar: "https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ"
   },
   {
     name: "James Wellnitz",
@@ -48,7 +49,8 @@ export const teamMembers = [
     image: "/images/jwellnitz.jpg",
     color: "secondary",
     github: "https://github.com/jimmyjbling",
-    linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150"
+    linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150",
+    googlescholar: "https://scholar.google.com/citations?user=ZhselLIAAAAJ&hl=en"
   },
   {
     name: "Brandon Novy",
@@ -57,7 +59,8 @@ export const teamMembers = [
     image: "/images/novy.jpg",
     color: "secondary",
     github: "https://github.com/Brandon-Cole",
-    linkedin: "https://www.linkedin.com/in/brandon-novy-5a4227263/"
+    linkedin: "https://www.linkedin.com/in/brandon-novy-5a4227263/",
+    googlescholar: "https://scholar.google.com/citations?user=GM9ju-UAAAAJ&hl=en"
   },
   {
     name: "Shu-Hang (Jason) Lin",
@@ -68,6 +71,14 @@ export const teamMembers = [
     github: "https://github.com/jasonlin90125",
     linkedin: "https://www.linkedin.com/in/jasonlin90125/"
   },
+  {
+    name: "Adam Gramlich",
+    role: "Undergrad Research Assistant",
+    bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in drug discovery. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
+    image: "/images/agramlic.png",
+    color: "tertiary",
+    linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
+  }
 ];
 
 // Publications

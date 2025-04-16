@@ -112,7 +112,7 @@ export default function Publications() {
           ))}
           
           <div className="text-center mt-10">
-            <a href="#" className="inline-flex items-center text-primary hover:text-primary/80 hover:underline text-lg font-medium">
+            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:text-primary/80 hover:underline text-lg font-medium">
               View All Publications
               <i className="fas fa-arrow-right ml-2"></i>
             </a>
