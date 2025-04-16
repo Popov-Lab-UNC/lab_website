@@ -24,14 +24,14 @@ export default function TeamMembers() {
   const colorMap: Record<string, string> = {
     primary: "text-primary",
     secondary: "text-secondary",
-    tertiary: "text-tertiary",
+    tertiary: "text-tertiary/80",
     quaternary: "text-quaternary",
   };
 
   const hoverColorMap: Record<string, string> = {
     primary: "hover:text-primary",
     secondary: "hover:text-secondary",
-    tertiary: "hover:text-tertiary",
+    tertiary: "hover:text-tertiary/80",
     quaternary: "hover:text-quaternary",
   };
 
