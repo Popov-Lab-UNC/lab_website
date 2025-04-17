@@ -1,3 +1,5 @@
+import { color } from "framer-motion";
+
 // Research Areas
 export const researchAreas = [
   {
@@ -35,7 +37,7 @@ export const teamMembers = [
   {
     name: "Konstantin Popov, PhD",
     role: "Principal Investigator",
-    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research. He is known for his dedication and enthusiasm, whether for mentoring students or sharing breakthroughs with colleagues.",
+    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research direction.",
     image: "/images/kpopov.jpg",
     color: "primary",
     github: "",
@@ -55,7 +57,7 @@ export const teamMembers = [
   {
     name: "Brandon Novy",
     role: "PhD Candidate",
-    bio: "A wet-lab-scientist-turned-computationalist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker who dives deep into research and a generous mentor who prioritizes others' growth. He thrives in collaborative spaces, balancing his sociability with thoughtful independence.",
+    bio: "An ex-wet-lab-scientist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker and a collaborator who dives deep into research. He has an unusually large appreciation for WWE and coffee.",
     image: "/images/novy.jpg",
     color: "secondary",
     github: "https://github.com/Brandon-Cole",
@@ -75,9 +77,16 @@ export const teamMembers = [
     name: "Adam Gramlich",
     role: "Undergrad Research Assistant",
     bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in drug discovery. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
-    image: "/images/agramlic.png",
+    image: "/images/agramlic.jpg",
     color: "tertiary",
     linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
+  },
+  {
+    name: "Julia Zhu",
+    role: "Undergrad Research Assistant",
+    bio: "Julia is a sophomore majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore protein-ligand interactions and structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
+    image: "/images/jiaz.jpeg",
+    color: "tertiary"
   }
 ];
 
