@@ -37,7 +37,7 @@ export const teamMembers = [
   {
     name: "Konstantin Popov, PhD",
     role: "Principal Investigator",
-    bio: "As head of the BIND lab, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research direction.",
+    bio: "As head of the BIND Lab at UNC, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research direction.",
     image: "/images/kpopov.jpg",
     color: "primary",
     github: "",
@@ -71,7 +71,8 @@ export const teamMembers = [
     image: "/images/shuhang.jpg",
     color: "secondary",
     github: "https://github.com/jasonlin90125",
-    linkedin: "https://www.linkedin.com/in/jasonlin90125/"
+    linkedin: "https://www.linkedin.com/in/jasonlin90125/",
+    googlescholar: "https://scholar.google.com/citations?user=6nz2p08AAAAJ&hl=en"
   },
   {
     name: "Adam Gramlich",
@@ -86,6 +87,13 @@ export const teamMembers = [
     role: "Undergrad Research Assistant",
     bio: "Julia is a sophomore majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore protein-ligand interactions and structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
     image: "/images/jiaz.jpeg",
+    color: "tertiary"
+  },
+  {
+    name: "Zengpeng (Alex) Liu",
+    role: "Undergrad Research Assistant",
+    bio: "Alex is a freshman majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
+    image: "/images/liualex.jpg",
     color: "tertiary"
   }
 ];
