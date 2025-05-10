@@ -19,10 +19,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Map interest value to label
       const interestLabels: Record<string, string> = {
-        phd: "PhD Program",
-        postdoc: "Postdoctoral Position",
-        collaboration: "Collaboration",
-        internship: "Internship",
+        research: "Research Collaboration",
+        phd: "PhD Program Interest",
+        postdoc: "Postdoctoral Positions",
+        undergraduate: "Undergraduate Research",
+        rotation: "Rotation Student Interest",
         other: "Other"
       };
       const interestLabel = interestLabels[validatedData.interest] || validatedData.interest;
