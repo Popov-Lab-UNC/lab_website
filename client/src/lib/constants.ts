@@ -182,7 +182,7 @@ export const publications = [
 export const contactInfo = {
   address: "3219 Marsico Hall, 125 Mason Farm Road\nChapel Hill, NC 27599",
   email: {
-    general: "kpopov@email.unc.edu",
+    general: "thebindlab@office.unc.edu",
   },
   affiliation: "UNC Eshelman School of Pharmacy",
 };
