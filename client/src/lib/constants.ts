@@ -82,6 +82,14 @@ export const teamMembers = [
     color: "tertiary",
   },
   {
+    name: "Ruthvika Kosuri",
+    role: "Research Assistant",
+    bio: "Ruthvika is a first-year Master's student studying Computer Science. She has a strong interest in cancer research and drug discovery. In her free time, she enjoys drawing, painting, and baking.",
+    image: "/images/rkosuri.jpg",
+    color: "tertiary",
+    linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
+  },
+  {
     name: "Adam Gramlich",
     role: "Research Assistant",
     bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in drug discovery. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
