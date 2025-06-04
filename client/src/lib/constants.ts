@@ -38,7 +38,7 @@ export const teamMembers = [
     name: "Konstantin Popov, PhD",
     role: "Principal Investigator",
     bio: "As head of the BIND Lab at UNC, Dr. Popov's expertise lies within the multidisciplinary crossroads of physics, chemistry, and computation. He is the major driver and strategist for the lab's research direction.",
-    image: "/images/kpopov.jpg",
+    image: "/images/kpopov.webp",
     color: "primary",
     github: "",
     linkedin: "https://www.linkedin.com/in/konstantin-popov-profile",
@@ -48,7 +48,7 @@ export const teamMembers = [
     name: "James Wellnitz",
     role: "PhD Candidate",
     bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
-    image: "/images/jwellnitz.jpg",
+    image: "/images/jwellnitz.webp",
     color: "secondary",
     github: "https://github.com/jimmyjbling",
     linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150",
@@ -58,7 +58,7 @@ export const teamMembers = [
     name: "Brandon Novy",
     role: "PhD Candidate",
     bio: "An ex-wet-lab-scientist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker and a collaborator who dives deep into research. He has an unusually large appreciation for WWE (WHOO!) and coffee.",
-    image: "/images/novy.jpg",
+    image: "/images/novy.webp",
     color: "secondary",
     github: "https://github.com/Brandon-Cole",
     linkedin: "https://www.linkedin.com/in/brandon-novy-5a4227263/",
@@ -68,7 +68,7 @@ export const teamMembers = [
     name: "Shu-Hang (Jason) Lin",
     role: "PhD Student",
     bio: "Jason grew up wanting to become a treasure hunter, and he views working in drug discovery as a decent substitute. He is interested in writing software to change the ways we design molecules. He finds great fulfillment in learning across disciplines and hobbies to become a well-rounded individual. He loves to dance and solve daily chess puzzles.",
-    image: "/images/shuhang.jpg",
+    image: "/images/shuhang.webp",
     color: "secondary",
     github: "https://github.com/jasonlin90125",
     linkedin: "https://www.linkedin.com/in/jasonlin90125/",
@@ -78,14 +78,14 @@ export const teamMembers = [
     name: "Spencer Thompson",
     role: "Research Assistant",
     bio: "Spencer graduated from UNC in 2023 with a BS in Biochemistry and minors in Biology and Neuroscience. He works full-time at the UNC BRIC Small Animal Imaging Facility and volunteers his efforts at BIND. He is interested in developing novel ligands for targeted radiopharmaceutal imaging and therapy. He also enjoys fishing, going to the gym, and long walks on the beach.",
-    image: "/images/thompson.jpg",
+    image: "/images/thompson.webp",
     color: "tertiary",
   },
   {
     name: "Ruthvika Kosuri",
     role: "Research Assistant",
     bio: "Ruthvika is a first-year Master's student studying Computer Science. She has a strong interest in cancer research and drug discovery. In her free time, she enjoys drawing, painting, and baking.",
-    image: "/images/rkosuri.jpg",
+    image: "/images/rkosuri.webp",
     color: "tertiary",
     linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
   },
@@ -93,14 +93,14 @@ export const teamMembers = [
     name: "Julia Zhu",
     role: "Research Assistant",
     bio: "Julia is a junior majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
-    image: "/images/jiaz.jpeg",
+    image: "/images/jiaz.webp",
     color: "tertiary"
   },
   {
     name: "Adam Gramlich",
     role: "Research Assistant",
     bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in chemistry, specifically drug discovery and applications. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
-    image: "/images/agramlic.jpg",
+    image: "/images/agramlic.webp",
     color: "tertiary",
     linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
   },
@@ -108,7 +108,7 @@ export const teamMembers = [
     name: "Zengpeng (Alex) Liu",
     role: "Research Assistant",
     bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
-    image: "/images/liualex.jpg",
+    image: "/images/liualex.webp",
     color: "tertiary"
   }
 ];

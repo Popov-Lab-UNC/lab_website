@@ -58,7 +58,7 @@ export default function Hero() {
             */}
             <div className="relative w-full"> {/* Removed fixed heights */}
               <img
-                src="/images/3mxf_v1_cropped.png"
+                src="/images/3mxf_v1_cropped.webp"
                 alt="Protein structure with small molecule"
                 // Image Styling:
                 // - w-full: Make image take the full width of its container.
