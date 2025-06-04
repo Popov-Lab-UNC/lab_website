@@ -67,7 +67,7 @@ export const teamMembers = [
   {
     name: "Shu-Hang (Jason) Lin",
     role: "PhD Student",
-    bio: "Jason grew up wanting to become a treasure hunter, and he views working in drug discovery as a decent substitute. He finds great fulfillment in learning across disciplines and hobbies to become a well-rounded researcher and individual.",
+    bio: "Jason grew up wanting to become a treasure hunter, and he views working in drug discovery as a decent substitute. He is interested in writing software to change the ways we design molecules. He finds great fulfillment in learning across disciplines and hobbies to become a well-rounded individual. He loves to dance and solve daily chess puzzles.",
     image: "/images/shuhang.jpg",
     color: "secondary",
     github: "https://github.com/jasonlin90125",
@@ -90,24 +90,24 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
   },
   {
+    name: "Julia Zhu",
+    role: "Research Assistant",
+    bio: "Julia is a junior majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
+    image: "/images/jiaz.jpeg",
+    color: "tertiary"
+  },
+  {
     name: "Adam Gramlich",
     role: "Research Assistant",
-    bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in drug discovery. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
+    bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in chemistry, specifically drug discovery and applications. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
     image: "/images/agramlic.jpg",
     color: "tertiary",
     linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
   },
   {
-    name: "Julia Zhu",
-    role: "Research Assistant",
-    bio: "Julia is a sophomore majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore protein-ligand interactions and structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
-    image: "/images/jiaz.jpeg",
-    color: "tertiary"
-  },
-  {
     name: "Zengpeng (Alex) Liu",
     role: "Research Assistant",
-    bio: "Alex is a freshman majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
+    bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
     image: "/images/liualex.jpg",
     color: "tertiary"
   }
