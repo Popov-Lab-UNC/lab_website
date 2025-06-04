@@ -12,6 +12,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faUniversity, faMapMarkerAlt, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription } from "../ui/dialog";
 
 export default function ContactForm() {
   const { toast } = useToast();
@@ -24,6 +25,7 @@ export default function ContactForm() {
     consent: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyOpen, setPrivacyOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -264,8 +266,46 @@ export default function ContactForm() {
                         onCheckedChange={handleCheckboxChange}
                       />
                       <Label htmlFor="consent" className="text-sm text-slate-600">
-                        I agree to the processing of my data according to the <a href="#" className="text-[#0062CC] hover:underline">Privacy Policy</a>.
-                      </Label> {/* Replace # with actual link */}
+                        I agree to the processing of my data according to the {" "}
+                        <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
+                          <DialogTrigger asChild>
+                            <a href="#" className="text-[#0062CC] hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-2xl">
+                            <DialogTitle>Privacy Policy</DialogTitle>
+                            <DialogDescription asChild>
+                              <div className="space-y-4 text-left max-h-[60vh] overflow-y-auto">
+                                <p><strong>Effective Date:</strong> June 4, 2025</p>
+                                <p>
+                                  We value your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you contact us through this form.
+                                </p>
+                                <h4 className="font-semibold">1. Information We Collect</h4>
+                                <ul className="list-disc ml-6">
+                                  <li><strong>Personal Information:</strong> Name, email address, organization, and any other information you provide in your message.</li>
+                                  <li><strong>Usage Data:</strong> We may collect non-identifying information about how you interact with our website.</li>
+                                </ul>
+                                <h4 className="font-semibold">2. How We Use Your Information</h4>
+                                <ul className="list-disc ml-6">
+                                  <li>To respond to your inquiries or requests.</li>
+                                  <li>To improve our website and services.</li>
+                                  <li>To comply with legal obligations.</li>
+                                </ul>
+                                <h4 className="font-semibold">3. Data Sharing</h4>
+                                <p>We do not sell or rent your personal information. We may share your data with trusted service providers who assist us in operating our website, as required by law, or to protect our rights.</p>
+                                <h4 className="font-semibold">4. Data Security</h4>
+                                <p>We implement reasonable security measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
+                                <h4 className="font-semibold">5. Your Rights</h4>
+                                <p>You may request to access, correct, or delete your personal information by contacting us.</p>
+                                <h4 className="font-semibold">6. Changes to This Policy</h4>
+                                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
+                                <h4 className="font-semibold">7. Contact</h4>
+                                <p>If you have any questions about this Privacy Policy, please contact us using the information provided on this website.</p>
+                              </div>
+                            </DialogDescription>
+                          </DialogContent>
+                        </Dialog>
+                        .
+                      </Label>
                     </div>
                     
                     <div>
