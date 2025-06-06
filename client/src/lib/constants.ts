@@ -41,7 +41,6 @@ export const teamMembers = [
     image: "/images/kpopov.webp",
     color: "primary",
     github: "",
-    linkedin: "https://www.linkedin.com/in/konstantin-popov-profile",
     googlescholar: "https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ"
   },
   {
