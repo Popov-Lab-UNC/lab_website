@@ -18,13 +18,22 @@ export default function Publications() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  // Maps color names to classes
+  // Maps color names to classes with better contrast for accessibility
   const colorMap: Record<string, { text: string, bg: string }> = {
     primary: { text: "text-primary", bg: "bg-primary/10" },
-    secondary: { text: "text-secondary", bg: "bg-secondary/10" },
-    tertiary: { text: "text-tertiary", bg: "bg-tertiary/10" },
-    quaternary: { text: "text-quaternary0", bg: "bg-quaternary/10" },
-    other: {text: "text-slate-500", bg: "bg-slate-500/10" },
+    secondary: { text: "text-emerald-800", bg: "bg-emerald-100" },
+    tertiary: { text: "text-amber-800", bg: "bg-amber-100" },
+    quaternary: { text: "text-violet-800", bg: "bg-violet-100" },
+    other: {text: "text-slate-800", bg: "bg-slate-100" },
+  };
+
+  // Maps color names to classes for the colored squares with darker backgrounds
+  const squareColorMap: Record<string, { text: string, bg: string }> = {
+    primary: { text: "text-white", bg: "bg-primary" },
+    secondary: { text: "text-white", bg: "bg-emerald-600" },
+    tertiary: { text: "text-white", bg: "bg-amber-600" },
+    quaternary: { text: "text-white", bg: "bg-violet-600" },
+    other: {text: "text-white", bg: "bg-slate-600" },
   };
 
   // Map specific tags to colors
@@ -73,8 +82,8 @@ export default function Publications() {
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 {/* Optional: Keep icon consistent or use publication.color */}
                 <div className="flex-shrink-0">
-                  <div className={`w-16 h-16 ${colorMap[getTagColor(publication.tags[0])].bg} rounded-lg flex items-center justify-center`}>
-                    <i className={`fas fa-file-alt ${colorMap[getTagColor(publication.tags[0])].text} text-xl`}></i>
+                  <div className={`w-16 h-16 ${squareColorMap[getTagColor(publication.tags[0])].bg} rounded-lg flex items-center justify-center`}>
+                    <i className={`fas fa-file-alt ${squareColorMap[getTagColor(publication.tags[0])].text} text-xl`}></i>
                   </div>
                 </div>
                 <div className="flex-grow">
@@ -84,35 +93,36 @@ export default function Publications() {
                   <p className="text-slate-600 mb-2">
                     {publication.authors} <span className="italic">{publication.journal}</span> ({publication.year}) {publication.isPreprint && <span className="text-xs bg-yellow-200 text-yellow-800 px-1.5 py-0.5 rounded-sm ml-1">Preprint</span>}
                   </p>
-                  <div className="flex flex-wrap items-center gap-3 text-sm">
+                  <div className="flex flex-wrap items-center gap-3 text-base">
                     {publication.tags.map((tag, tagIndex) => (
                         <span 
                         key={tagIndex} 
-                        className={`px-3 py-1 ${colorMap[getTagColor(tag)].bg} ${colorMap[getTagColor(tag)].text} rounded-full`}
+                        className={`px-3 py-1 ${colorMap[getTagColor(tag)].bg} ${colorMap[getTagColor(tag)].text} rounded-full font-medium`}
                         >
                         {tag}
                         </span>
                     ))}
                   </div>
                 </div>
-                <div className="flex-shrink-0">
-                  <Button
-                    asChild
-                    variant="link"
-                    className={`text-primary hover:text-primary/80 p-0 h-auto`}
+                <div className="flex-shrink-0 ml-2">
+                  <a 
+                    href={publication.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-slate-700 hover:text-slate-900 font-medium text-base relative group no-underline inline-flex items-center"
+                    aria-label={`View paper: ${publication.title}`}
                   >
-                    <a href={publication.link} target="_blank" rel="noopener noreferrer">
-                      View Paper
-                      <i className="fas fa-external-link-alt ml-1.5 text-xs"></i>
-                    </a>
-                  </Button>
+                    View Paper
+                    <i className="fas fa-external-link-alt ml-1.5 text-xs"></i>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-900 transition-all duration-300 group-hover:w-full"></span>
+                  </a>
                 </div>
               </div>
             </motion.div>
           ))}
           
           <div className="text-center mt-10">
-            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary hover:text-primary/80 hover:underline text-lg font-medium">
+            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-slate-700 hover:text-slate-900 hover:underline text-lg font-medium" aria-label="View all publications on Google Scholar">
               View All Publications
               <i className="fas fa-arrow-right ml-2"></i>
             </a>

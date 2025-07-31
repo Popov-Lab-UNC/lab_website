@@ -93,7 +93,7 @@ export default function TeamMembers() {
                  {/* Change name text color */}
                 <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-center text-white mb-1">{member.name}</h3>
                 {/* Role color remains dynamic */}
-                <p className={`${colorMap[member.color]} text-center font-medium mb-3`}>{member.role}</p>
+                <p className={`${colorMap[member.color]} text-center font-medium mb-3 text-lg`}>{member.role}</p>
                  {/* Change bio text color */}
                 <p className="text-slate-300 mb-4 text-sm"> {/* Made text slightly smaller, changed color */}
                   {member.bio}
@@ -102,17 +102,17 @@ export default function TeamMembers() {
                 <div className="flex items-center space-x-3">
                   {/* Example: Add actual links based on member data */}
                   {member.linkedin && (
-                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`}>
+                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`} aria-label={`Visit ${member.name}'s LinkedIn profile`}>
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
                   )}
                    {member.github && (
-                     <a href={member.github} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`}>
+                     <a href={member.github} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`} aria-label={`Visit ${member.name}'s GitHub profile`}>
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   )}
                   {member.googlescholar && (
-                     <a href={member.googlescholar} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`}>
+                     <a href={member.googlescholar} target="_blank" rel="noopener noreferrer" className={`text-slate-400 ${hoverColorMap[member.color]} transition-colors`} aria-label={`View ${member.name}'s Google Scholar profile`}>
                       <FontAwesomeIcon icon={faGraduationCap} />
                     </a>
                   )}

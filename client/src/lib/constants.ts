@@ -44,8 +44,8 @@ export const teamMembers = [
     googlescholar: "https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ"
   },
   {
-    name: "James Wellnitz",
-    role: "PhD Candidate",
+    name: "James Wellnitz, PhD",
+    role: "Advisor/Alumni",
     bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
     image: "/images/jwellnitz.webp",
     color: "secondary",
@@ -78,14 +78,14 @@ export const teamMembers = [
     role: "Research Assistant",
     bio: "Spencer graduated from UNC in 2023 with a BS in Biochemistry and minors in Biology and Neuroscience. He works full-time at the UNC BRIC Small Animal Imaging Facility and volunteers his efforts at BIND. He is interested in developing novel ligands for targeted radiopharmaceutal imaging and therapy. He also enjoys fishing, going to the gym, and long walks on the beach.",
     image: "/images/thompson.webp",
-    color: "tertiary",
+    color: "secondary",
   },
   {
     name: "Ruthvika Kosuri",
     role: "Research Assistant",
     bio: "Ruthvika is a first-year Master's student studying Computer Science. She has a strong interest in cancer research and drug discovery. In her free time, she enjoys drawing, painting, and baking.",
     image: "/images/rkosuri.webp",
-    color: "tertiary",
+    color: "secondary",
     linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
   },
   {
@@ -93,14 +93,14 @@ export const teamMembers = [
     role: "Research Assistant",
     bio: "Julia is a junior majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
     image: "/images/jiaz.webp",
-    color: "tertiary"
+    color: "secondary"
   },
   {
     name: "Adam Gramlich",
     role: "Research Assistant",
     bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in chemistry, specifically drug discovery and applications. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
     image: "/images/agramlic.webp",
-    color: "tertiary",
+    color: "secondary",
     linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
   },
   {
@@ -108,7 +108,7 @@ export const teamMembers = [
     role: "Research Assistant",
     bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
     image: "/images/liualex.webp",
-    color: "tertiary"
+    color: "secondary"
   }
 ];
 
@@ -120,8 +120,8 @@ export const publications = [
     journal: "BioRxiv",
     year: "2025",
     tags: ["DEL Technology", "Tool Development"],
-    link: "https://www.biorxiv.org/content/10.1101/2025.02.25.640184v1",
-    doi: "10.1101/2025.02.25.640184v1",
+    link: "https://www.biorxiv.org/content/10.1101/2025.02.25.640184v2",
+    doi: "10.1101/2025.02.25.640184v2",
     isPreprint: true,
   },
   {
@@ -208,7 +208,7 @@ export const interestAreas = [
 export const socialLinks = [
   { platform: "linkedin", url: "https://www.linkedin.com/in/konstantin-popov-profile", icon: "linkedin-in" },
   { platform: "github", url: "https://github.com/Popov-Lab-UNC", icon: "github" },
-  { platform: "university", url: "https://pharmacy.unc.edu/directory/kpopov/", icon: "university" },
+  { platform: "university", url: "https://tarheels.live/popovlab", icon: "university" },
 ];
 
 // Navigation Links

@@ -7,7 +7,10 @@ export default function Hero() {
       id="home"
       // Keep min-h-screen and flex items-center for vertical centering
       // Use the original padding progression, maybe slightly moderated on lg
-      className="min-h-screen flex items-center text-white pt-16 bg-gradient-to-r from-primary to-secondary"
+      className="min-h-screen flex items-center text-white pt-16"
+      style={{
+        background: 'linear-gradient(to right, hsl(204, 61%, 48%) 0%, hsl(204, 61%, 48%) 55%, hsl(149, 38%, 55%) 100%)'
+      }}
     >
       {/* Use the standard container for consistent max-width and padding */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28"> {/* Adjusted lg padding slightly from 32 */}

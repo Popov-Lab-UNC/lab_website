@@ -96,7 +96,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-r from-secondary/20 to-primary/70">
+    <section id="contact" className="py-24 bg-gradient-to-r from-secondary/30 to-primary/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -106,22 +106,22 @@ export default function ContactForm() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-700 mb-6">
+              <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 mb-6">
                 Partner With Us on the Future of Medicine
               </h2>
-              <p className="text-lg text-slate-700 mb-8">
+              <p className="text-xl text-slate-800 mb-8">
                 Whether you're looking to join our team or collaborate on research, <br></br> we're excited to connect with fellow innovators.
               </p>
           
               <div className="space-y-6 mb-8">
                 {/* Address */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-primary" />
+                  <div className="w-14 h-14 rounded-full bg-transparent flex items-center justify-center flex-shrink-0 mt-1">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-slate-700 text-2xl" />
                   </div>
                   <div>
-                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-700 mb-1">Meet With Us</h3>
-                    <p className="text-slate-700">
+                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-800 mb-1 text-lg">Meet With Us</h3>
+                    <p className="text-slate-800 text-lg">
                       {contactInfo.address.split('\n').map((line, i) => (
                         <span key={i}>{line}<br /></span>
                       ))}
@@ -131,13 +131,13 @@ export default function ContactForm() {
                 
                 {/* Email */}
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <FontAwesomeIcon icon={faEnvelope} className="text-secondary" />
+                  <div className="w-14 h-14 rounded-full bg-transparent flex items-center justify-center flex-shrink-0 mt-1">
+                    <FontAwesomeIcon icon={faEnvelope} className="text-slate-700 text-2xl" />
                   </div>
                   <div>
-                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-700 mb-1">Email Us</h3>
-                    <p className="text-slate-700">
-                      <a href={`mailto:${contactInfo.email.general}`} className="transition-colors">{contactInfo.email.general}</a>
+                    <h3 className="font-['Space_Grotesk'] font-semibold text-slate-800 mb-1 text-lg">Email Us</h3>
+                    <p className="text-slate-800 text-lg">
+                      <a href={`mailto:${contactInfo.email.general}`} className="transition-colors hover:text-primary">{contactInfo.email.general}</a>
                     </p>
                   </div>
                 </div>
@@ -158,22 +158,17 @@ export default function ContactForm() {
               </div>
               
               <div className="flex space-x-5">
-                {socialLinks.map((link, index) => (
+                {socialLinks.filter(link => link.platform !== 'linkedin').map((link, index) => (
                   <a 
                     key={index}
                     href={link.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-slate-100 hover:bg-primary hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-600"
+                    className="w-12 h-12 bg-slate-100 hover:bg-primary hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-600"
                     aria-label={`Follow us on ${link.platform}`}
                   >
-                    {link.icon === 'linkedin-in' && <FontAwesomeIcon icon={faLinkedinIn} />}
-                    {link.icon === 'github' && <FontAwesomeIcon icon={faGithub} />}
-                    {link.icon === 'university' && <FontAwesomeIcon icon={faUniversity} />} 
-                    {/* Ensure correct icons are defined in constants.ts */}
-                    {/* Example using FontAwesomeIcon: */}
-                    {/* <FontAwesomeIcon icon={link.icon === 'linkedin-in' ? faLinkedinIn : link.icon === 'github' ? faGithub : faUniversity} /> */}
-                    {/* Needs proper mapping based on `constants.ts` icon values */}
+                    {link.icon === 'github' && <FontAwesomeIcon icon={faGithub} className="text-lg" />}
+                    {link.icon === 'university' && <FontAwesomeIcon icon={faUniversity} className="text-lg" />} 
                   </a>
                 ))}
               </div>
@@ -192,7 +187,7 @@ export default function ContactForm() {
                   <div className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="name" className="text-sm font-medium text-slate-700 mb-1">Your Name</Label>
+                        <Label htmlFor="name" className="text-sm font-medium text-slate-700 mb-1">Your Name *</Label>
                         <Input 
                           type="text" 
                           id="name"
@@ -201,10 +196,11 @@ export default function ContactForm() {
                           onChange={handleChange}
                           className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                           placeholder="Jane Doe"
+                          required
                         />
                       </div>
                       <div>
-                        <Label htmlFor="email" className="text-sm font-medium text-slate-700 mb-1">Email Address</Label>
+                        <Label htmlFor="email" className="text-sm font-medium text-slate-700 mb-1">Email Address *</Label>
                         <Input 
                           type="email" 
                           id="email"
@@ -213,6 +209,7 @@ export default function ContactForm() {
                           onChange={handleChange}
                           className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                           placeholder="jane.doe@example.com"
+                          required
                         />
                       </div>
                     </div>
@@ -231,7 +228,7 @@ export default function ContactForm() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="interest" className="text-sm font-medium text-slate-700 mb-1">Interest Area</Label>
+                      <Label htmlFor="interest" className="text-sm font-medium text-slate-700 mb-1">Interest Area *</Label>
                       <Select onValueChange={handleSelectChange} value={formData.interest}>
                       <SelectTrigger className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors">
                           <SelectValue placeholder="Select your interest" />
@@ -247,7 +244,7 @@ export default function ContactForm() {
                     </div>
                     
                     <div>
-                      <Label htmlFor="message" className="text-sm font-medium text-slate-700 mb-1">Your Message</Label>
+                      <Label htmlFor="message" className="text-sm font-medium text-slate-700 mb-1">Your Message *</Label>
                       <Textarea 
                         id="message"
                         name="message"
@@ -256,6 +253,7 @@ export default function ContactForm() {
                         rows={4} 
                         className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
                         placeholder="Tell us about your project or inquiry..."
+                        required
                       />
                     </div>
                     
@@ -269,7 +267,7 @@ export default function ContactForm() {
                         I agree to the processing of my data according to the {" "}
                         <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
                           <DialogTrigger asChild>
-                            <a href="#" className="text-[#0062CC] hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
+                            <a href="#" className="text-primary hover:text-primary/80 hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
                           </DialogTrigger>
                           <DialogContent className="max-w-2xl">
                             <DialogTitle>Privacy Policy</DialogTitle>
@@ -308,10 +306,14 @@ export default function ContactForm() {
                       </Label>
                     </div>
                     
+                    <div className="text-sm text-slate-500 mb-4">
+                      * denotes required fields
+                    </div>
+                    
                     <div>
                       <Button 
                         type="submit" 
-                        className="w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-lg hover:shadow-lg transition-all h-auto"
+                        className="w-full px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-medium rounded-lg hover:shadow-lg transition-all h-auto"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}

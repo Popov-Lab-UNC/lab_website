@@ -22,13 +22,14 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 text-slate-700 hover:bg-slate-100 rounded-md"
+                className="block px-3 py-2 text-slate-800 hover:bg-slate-100 hover:text-primary rounded-md transition-all duration-200 relative group text-lg"
                 onClick={() => {
                   // Close the menu after clicking a link
                   setTimeout(onClose, 300);
                 }}
               >
-                {link.label}
+                                {link.label}
+                <span className="absolute left-0 top-0 w-0 h-full bg-primary/10 transition-all duration-300 group-hover:w-full rounded-md"></span>
               </a>
             ))}
           </div>

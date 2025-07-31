@@ -25,7 +25,7 @@ export default function Header() {
     <header 
       className={cn(
         "fixed w-full z-50 backdrop-blur-[10px] shadow-sm transition-all duration-300",
-        isScrolled ? "bg-white/80" : "bg-white/70"
+        isScrolled ? "bg-white/90" : "bg-white/85"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,9 +43,10 @@ export default function Header() {
               <a 
                 key={link.href}
                 href={link.href} 
-                className="text-slate-700 hover:text-primary font-medium transition-colors"
+                className="text-slate-800 hover:text-primary font-medium text-lg transition-all duration-300 relative group"
               >
                 {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
@@ -53,7 +54,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button 
             type="button" 
-            className="md:hidden p-2 rounded-md text-slate-700 hover:text-primary focus:outline-none"
+            className="md:hidden p-2 rounded-md text-slate-800 hover:text-primary hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 transition-all duration-200"
             onClick={toggleMobileMenu}
             aria-label="Toggle mobile menu"
           >

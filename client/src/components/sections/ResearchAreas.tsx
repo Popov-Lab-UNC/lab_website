@@ -19,12 +19,32 @@ export default function ResearchAreas() {
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  // Maps color names to Tailwind classes
-  const colorMap: Record<string, { bg: string, text: string, hover: string }> = {
-    primary: { bg: "bg-primary/10", text: "text-primary", hover: "group-hover:text-primary" },
-    secondary: { bg: "bg-secondary/10", text: "text-secondary", hover: "group-hover:text-secondary" },
-    tertiary: { bg: "bg-tertiary/10", text: "text-tertiary", hover: "group-hover:text-tertiary" },
-    quaternary: { bg: "bg-quaternary/10", text: "text-quaternary", hover: "group-hover:text-quaternary" }, 
+  // Maps color names to Tailwind classes with better contrast for links
+  const colorMap: Record<string, { bg: string, text: string, hover: string, link: string }> = {
+    primary: { 
+      bg: "bg-primary/10", 
+      text: "text-primary", 
+      hover: "group-hover:text-primary",
+      link: "text-slate-800 hover:text-primary font-medium"
+    },
+    secondary: { 
+      bg: "bg-secondary/10", 
+      text: "text-secondary", 
+      hover: "group-hover:text-secondary",
+      link: "text-slate-800 hover:text-green-700 font-medium"
+    },
+    tertiary: { 
+      bg: "bg-tertiary/10", 
+      text: "text-tertiary", 
+      hover: "group-hover:text-tertiary",
+      link: "text-slate-800 hover:text-orange-700 font-medium"
+    },
+    quaternary: { 
+      bg: "bg-quaternary/10", 
+      text: "text-quaternary", 
+      hover: "group-hover:text-quaternary",
+      link: "text-slate-800 hover:text-purple-700 font-medium"
+    }, 
   };
 
   const iconMap = {
@@ -71,7 +91,7 @@ export default function ResearchAreas() {
               <p className="text-slate-600 mb-4">
                 {area.description}
               </p>
-              <a href={area.link} className={`${colorMap[area.color].text} font-medium inline-flex items-center group`}>
+              <a href={area.link} className={`${colorMap[area.color].link} inline-flex items-center group transition-colors duration-200`}>
                 Learn more <i className="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
               </a>
             </motion.div>
