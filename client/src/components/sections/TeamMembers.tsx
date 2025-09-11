@@ -59,8 +59,8 @@ export default function TeamMembers() {
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4"> {/* Changed text-slate-800 to text-white */}
             Our Team
           </h2>
-          <p className="text-lg text-slate-300 max-w-xl mx-auto"> {/* Changed text-slate-600 to text-slate-300 */}
-            Meet the minds behind our discoveries
+          <p className="text-xl text-slate-300 max-w-xl mx-auto"> {/* Increased from text-lg to text-xl */}
+            Meet the people behind our discoveries
           </p>
         </motion.div>
 
@@ -95,7 +95,7 @@ export default function TeamMembers() {
                 {/* Role color remains dynamic */}
                 <p className={`${colorMap[member.color]} text-center font-medium mb-3 text-lg`}>{member.role}</p>
                  {/* Change bio text color */}
-                <p className="text-slate-300 mb-4 text-sm"> {/* Made text slightly smaller, changed color */}
+                <p className="text-slate-300 mb-4 text-base"> {/* Increased font size from text-sm to text-base */}
                   {member.bio}
                 </p>
                 {/* 3. Update social icon base color */}

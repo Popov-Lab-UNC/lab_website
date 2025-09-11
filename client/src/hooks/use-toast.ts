@@ -13,12 +13,14 @@ type ToasterToast = ToastProps & {
   title?: React.ReactNode
   description?: React.ReactNode
   action?: ToastActionElement
+  persistent?: boolean
 }
 
 const actionTypes = {
   ADD_TOAST: "ADD_TOAST",
   UPDATE_TOAST: "UPDATE_TOAST",
   DISMISS_TOAST: "DISMISS_TOAST",
+  MANUAL_DISMISS_TOAST: "MANUAL_DISMISS_TOAST",
   REMOVE_TOAST: "REMOVE_TOAST",
 } as const
 
@@ -45,6 +47,10 @@ type Action =
       toastId?: ToasterToast["id"]
     }
   | {
+      type: ActionType["MANUAL_DISMISS_TOAST"]
+      toastId?: ToasterToast["id"]
+    }
+  | {
       type: ActionType["REMOVE_TOAST"]
       toastId?: ToasterToast["id"]
     }
@@ -55,12 +61,20 @@ interface State {
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>()
 
-const addToRemoveQueue = (toastId: string) => {
+const addToRemoveQueue = (toastId: string, persistent: boolean = false) => {
   if (toastTimeouts.has(toastId)) {
     return
   }
 
+  // Don't auto-remove persistent toasts
+  if (persistent) {
+    console.log(`Toast ${toastId} is persistent, not adding to remove queue`)
+    return
+  }
+
+  console.log(`Adding toast ${toastId} to remove queue (not persistent)`)
   const timeout = setTimeout(() => {
+    console.log(`Auto-removing toast ${toastId}`)
     toastTimeouts.delete(toastId)
     dispatch({
       type: "REMOVE_TOAST",
@@ -89,14 +103,54 @@ export const reducer = (state: State, action: Action): State => {
 
     case "DISMISS_TOAST": {
       const { toastId } = action
+      console.log(`DISMISS_TOAST called for toast ${toastId}`)
 
       // ! Side effects ! - This could be extracted into a dismissToast() action,
       // but I'll keep it here for simplicity
       if (toastId) {
-        addToRemoveQueue(toastId)
+        const toast = state.toasts.find(t => t.id === toastId)
+        console.log(`Toast ${toastId} persistent: ${toast?.persistent}`)
+        // Only add to remove queue if not persistent
+        if (!toast?.persistent) {
+          addToRemoveQueue(toastId, false)
+        }
       } else {
         state.toasts.forEach((toast) => {
-          addToRemoveQueue(toast.id)
+          // Only add to remove queue if not persistent
+          if (!toast.persistent) {
+            addToRemoveQueue(toast.id, false)
+          }
+        })
+      }
+
+      return {
+        ...state,
+        toasts: state.toasts.map((t) => {
+          // For persistent toasts, don't set open: false
+          if (t.persistent && (t.id === toastId || toastId === undefined)) {
+            return t // Keep the toast open
+          }
+          // For non-persistent toasts, set open: false as before
+          if (t.id === toastId || toastId === undefined) {
+            return {
+              ...t,
+              open: false,
+            }
+          }
+          return t
+        }),
+      }
+    }
+    case "MANUAL_DISMISS_TOAST": {
+      const { toastId } = action
+      console.log(`MANUAL_DISMISS_TOAST called for toast ${toastId}`)
+
+      // For manual dismiss, always add to remove queue and set open: false
+      if (toastId) {
+        addToRemoveQueue(toastId, false)
+      } else {
+        state.toasts.forEach((toast) => {
+          addToRemoveQueue(toast.id, false)
         })
       }
 
@@ -148,6 +202,7 @@ function toast({ ...props }: Toast) {
       toast: { ...props, id },
     })
   const dismiss = () => dispatch({ type: "DISMISS_TOAST", toastId: id })
+  const manualDismiss = () => dispatch({ type: "MANUAL_DISMISS_TOAST", toastId: id })
 
   dispatch({
     type: "ADD_TOAST",
@@ -155,8 +210,15 @@ function toast({ ...props }: Toast) {
       ...props,
       id,
       open: true,
+      duration: props.persistent ? Infinity : undefined, // Prevent auto-dismiss for persistent toasts
       onOpenChange: (open) => {
-        if (!open) dismiss()
+        // Only auto-dismiss if not persistent
+        if (!open && !props.persistent) {
+          dismiss()
+        } else if (!open && props.persistent) {
+          // For persistent toasts, use manual dismiss when user clicks close
+          manualDismiss()
+        }
       },
     },
   })
@@ -164,6 +226,7 @@ function toast({ ...props }: Toast) {
   return {
     id: id,
     dismiss,
+    manualDismiss,
     update,
   }
 }
@@ -185,6 +248,7 @@ function useToast() {
     ...state,
     toast,
     dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+    manualDismiss: (toastId?: string) => dispatch({ type: "MANUAL_DISMISS_TOAST", toastId }),
   }
 }
 

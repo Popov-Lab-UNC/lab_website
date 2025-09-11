@@ -61,7 +61,7 @@ export default function Publications() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 mb-4">Recent Publications</h2>
-          <p className="text-lg text-slate-600 max-w-xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-xl mx-auto">
             Our latest contributions to the scientific community
           </p>
         </motion.div>
@@ -93,11 +93,11 @@ export default function Publications() {
                   <p className="text-slate-600 mb-2">
                     {publication.authors} <span className="italic">{publication.journal}</span> ({publication.year}) {publication.isPreprint && <span className="text-xs bg-yellow-200 text-yellow-800 px-1.5 py-0.5 rounded-sm ml-1">Preprint</span>}
                   </p>
-                  <div className="flex flex-wrap items-center gap-3 text-base">
+                  <div className="flex flex-wrap items-center gap-3 text-lg">
                     {publication.tags.map((tag, tagIndex) => (
                         <span 
                         key={tagIndex} 
-                        className={`px-3 py-1 ${colorMap[getTagColor(tag)].bg} ${colorMap[getTagColor(tag)].text} rounded-full font-medium`}
+                        className={`px-3 py-1 ${colorMap[getTagColor(tag)].bg} ${colorMap[getTagColor(tag)].text} rounded-full font-medium text-lg`}
                         >
                         {tag}
                         </span>
@@ -109,12 +109,11 @@ export default function Publications() {
                     href={publication.link} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-slate-700 hover:text-slate-900 font-medium text-base relative group no-underline inline-flex items-center"
-                    aria-label={`View paper: ${publication.title}`}
+                    className="text-blue-500 hover:text-blue-700 underline inline-flex items-center text-lg"
+                    aria-label={`Link to paper: ${publication.title}`}
                   >
-                    View Paper
+                    Link
                     <i className="fas fa-external-link-alt ml-1.5 text-xs"></i>
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-900 transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 </div>
               </div>
@@ -122,7 +121,7 @@ export default function Publications() {
           ))}
           
           <div className="text-center mt-10">
-            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-slate-700 hover:text-slate-900 hover:underline text-lg font-medium" aria-label="View all publications on Google Scholar">
+            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-500 hover:text-blue-700 underline text-lg font-medium" aria-label="View all publications on Google Scholar">
               View All Publications
               <i className="fas fa-arrow-right ml-2"></i>
             </a>

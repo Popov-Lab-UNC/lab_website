@@ -47,7 +47,8 @@ export default function ContactForm() {
       toast({
         title: "Please fill out all required fields",
         description: "All fields except organization are required.",
-        variant: "destructive"
+        variant: "destructive",
+        persistent: true
       });
       return;
     }
@@ -56,7 +57,8 @@ export default function ContactForm() {
       toast({
         title: "Please agree to the Privacy Policy",
         description: "You must agree to our Privacy Policy to submit the form.",
-        variant: "destructive"
+        variant: "destructive",
+        persistent: true
       });
       return;
     }
@@ -157,21 +159,6 @@ export default function ContactForm() {
                 </div>*/}
               </div>
               
-              <div className="flex space-x-5">
-                {socialLinks.filter(link => link.platform !== 'linkedin').map((link, index) => (
-                  <a 
-                    key={index}
-                    href={link.url} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-slate-100 hover:bg-primary hover:text-white transition-colors rounded-full flex items-center justify-center text-slate-600"
-                    aria-label={`Follow us on ${link.platform}`}
-                  >
-                    {link.icon === 'github' && <FontAwesomeIcon icon={faGithub} className="text-lg" />}
-                    {link.icon === 'university' && <FontAwesomeIcon icon={faUniversity} className="text-lg" />} 
-                  </a>
-                ))}
-              </div>
             </motion.div>
             
             <motion.div
@@ -230,7 +217,10 @@ export default function ContactForm() {
                     <div>
                       <Label htmlFor="interest" className="text-sm font-medium text-slate-700 mb-1">Interest Area *</Label>
                       <Select onValueChange={handleSelectChange} value={formData.interest}>
-                      <SelectTrigger className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors">
+                      <SelectTrigger 
+                        className="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+                        aria-label="Select your interest area"
+                      >
                           <SelectValue placeholder="Select your interest" />
                         </SelectTrigger>
                         <SelectContent>
@@ -269,35 +259,35 @@ export default function ContactForm() {
                           <DialogTrigger asChild>
                             <a href="#" className="text-primary hover:text-primary/80 hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
                           </DialogTrigger>
-                          <DialogContent className="max-w-2xl">
-                            <DialogTitle>Privacy Policy</DialogTitle>
+                          <DialogContent className="max-w-6xl max-h-[95vh] w-[95vw]">
+                            <DialogTitle className="text-2xl font-bold text-slate-900 mb-4">Privacy Policy</DialogTitle>
                             <DialogDescription asChild>
-                              <div className="space-y-4 text-left max-h-[60vh] overflow-y-auto">
-                                <p><strong>Effective Date:</strong> June 4, 2025</p>
-                                <p>
+                              <div className="space-y-6 text-left max-h-[80vh] overflow-y-auto text-lg leading-relaxed text-slate-800">
+                                <p className="text-slate-700"><strong className="text-slate-900">Effective Date:</strong> June 4, 2025</p>
+                                <p className="text-slate-700">
                                   We value your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you contact us through this form.
                                 </p>
-                                <h4 className="font-semibold">1. Information We Collect</h4>
-                                <ul className="list-disc ml-6">
-                                  <li><strong>Personal Information:</strong> Name, email address, organization, and any other information you provide in your message.</li>
-                                  <li><strong>Usage Data:</strong> We may collect non-identifying information about how you interact with our website.</li>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">1. Information We Collect</h4>
+                                <ul className="list-disc ml-6 space-y-2 text-slate-700">
+                                  <li><strong className="text-slate-900">Personal Information:</strong> Name, email address, organization, and any other information you provide in your message.</li>
+                                  <li><strong className="text-slate-900">Usage Data:</strong> We may collect non-identifying information about how you interact with our website.</li>
                                 </ul>
-                                <h4 className="font-semibold">2. How We Use Your Information</h4>
-                                <ul className="list-disc ml-6">
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">2. How We Use Your Information</h4>
+                                <ul className="list-disc ml-6 space-y-2 text-slate-700">
                                   <li>To respond to your inquiries or requests.</li>
                                   <li>To improve our website and services.</li>
                                   <li>To comply with legal obligations.</li>
                                 </ul>
-                                <h4 className="font-semibold">3. Data Sharing</h4>
-                                <p>We do not sell or rent your personal information. We may share your data with trusted service providers who assist us in operating our website, as required by law, or to protect our rights.</p>
-                                <h4 className="font-semibold">4. Data Security</h4>
-                                <p>We implement reasonable security measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
-                                <h4 className="font-semibold">5. Your Rights</h4>
-                                <p>You may request to access, correct, or delete your personal information by contacting us.</p>
-                                <h4 className="font-semibold">6. Changes to This Policy</h4>
-                                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
-                                <h4 className="font-semibold">7. Contact</h4>
-                                <p>If you have any questions about this Privacy Policy, please contact us using the information provided on this website.</p>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">3. Data Sharing</h4>
+                                <p className="text-slate-700">We do not sell or rent your personal information. We may share your data with trusted service providers who assist us in operating our website, as required by law, or to protect our rights.</p>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">4. Data Security</h4>
+                                <p className="text-slate-700">We implement reasonable security measures to protect your information. However, no method of transmission over the Internet is 100% secure.</p>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">5. Your Rights</h4>
+                                <p className="text-slate-700">You may request to access, correct, or delete your personal information by contacting us.</p>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">6. Changes to This Policy</h4>
+                                <p className="text-slate-700">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date.</p>
+                                <h4 className="font-bold text-xl text-slate-900 mt-6 mb-3">7. Contact</h4>
+                                <p className="text-slate-700">If you have any questions about this Privacy Policy, please contact us using the information provided on this website.</p>
                               </div>
                             </DialogDescription>
                           </DialogContent>

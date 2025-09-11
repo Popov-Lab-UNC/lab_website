@@ -65,13 +65,13 @@ export default function ResearchAreas() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-['Space_Grotesk'] font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 mb-4">Our Research Areas</h2>
-          <p className="text-lg text-slate-600 max-w-xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-xl mx-auto">
             Learn about our approach to drug discovery
           </p>
         </motion.div>
         
         <motion.div 
-          className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -88,11 +88,19 @@ export default function ResearchAreas() {
                 {/*<i className={`fas fa-${area.icon} ${colorMap[area.color].text} text-xl`}></i>*/}
               </div>
               <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-slate-800 mb-3">{area.title}</h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-slate-600 mb-4 text-lg">
                 {area.description}
               </p>
-              <a href={area.link} className={`${colorMap[area.color].link} inline-flex items-center group transition-colors duration-200`}>
-                Learn more <i className="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+              <a 
+                href={area.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700 underline inline-flex items-center text-lg"
+              >
+                {index === 0 && "HIDDEN GEM paper"}
+                {index === 1 && "DELi Github"}
+                {index === 2 && "CICBDD webpage"}
+                {index === 3 && "TS paper"}
               </a>
             </motion.div>
           ))}

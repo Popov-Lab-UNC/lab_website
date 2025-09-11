@@ -14,13 +14,13 @@ export default function Footer() {
               <div className="w-12 h-10 rounded-lg bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
                 <span className="text-white font-['Space_Grotesk'] font-bold text-xl">BIND</span>
               </div>
-              <span className="font-['Space_Grotesk'] font-semibold text-xl text-white">The BIND Lab</span>
+              <span className="font-['Space_Grotesk'] font-semibold text-2xl text-white">The BIND Lab</span>
             </div>
-            <p className="mb-6">
+            <p className="mb-6 text-lg">
               Shaping the future of biophysics and informatics for drug discovery.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.map((link) => (
+              {socialLinks.filter(link => link.platform !== 'linkedin').map((link) => (
                 <a 
                   key={link.platform}
                   href={link.url} 
@@ -29,17 +29,23 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  {link.platform === 'github' && <FontAwesomeIcon icon={faGithub} className="text-2xl" />}
+                  {link.platform === 'university' && <i className="fas fa-university text-lg"></i>}
                 </a>
               ))}
             </div>
           </div>
           
           <div>
-            <h3 className="font-['Space_Grotesk'] font-semibold text-lg text-white mb-4">Quick Links</h3>
+            <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="hover:text-white transition-colors">
+                  <a 
+                    href={link.href} 
+                    className="hover:text-white transition-colors text-lg"
+                    aria-label={`Navigate to ${link.label}`}
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -48,11 +54,17 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="font-['Space_Grotesk'] font-semibold text-lg text-white mb-4">Resources</h3>
+            <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-white mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-white transition-colors">
+                  <a 
+                    href={link.href} 
+                    className="hover:text-white transition-colors text-lg"
+                    aria-label={`Visit ${link.label}`}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -87,7 +99,7 @@ export default function Footer() {
           */}
         </div>
         
-        <p className="text-sm text-center mt-12">© {new Date().getFullYear()} The BIND Lab. All rights reserved.</p>
+        <p className="text-base text-center mt-12">© {new Date().getFullYear()} The BIND Lab. All rights reserved.</p>
       </div>
     </footer>
   );
