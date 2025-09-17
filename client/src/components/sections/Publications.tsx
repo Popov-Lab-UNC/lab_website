@@ -87,8 +87,16 @@ export default function Publications() {
                   </div>
                 </div>
                 <div className="flex-grow">
-                  <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-slate-800 mb-2">
-                    {publication.title}
+                  <h3 className="font-['Space_Grotesk'] font-semibold text-xl mb-2">
+                    <a 
+                      href={publication.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-slate-800 hover:text-blue-600 transition-colors"
+                      aria-label={`Link to ${publication.title}`}
+                    >
+                      {publication.title}
+                    </a>
                   </h3>
                   <p className="text-slate-600 mb-2">
                     {publication.authors} <span className="italic">{publication.journal}</span> ({publication.year}) {publication.isPreprint && <span className="text-xs bg-yellow-200 text-yellow-800 px-1.5 py-0.5 rounded-sm ml-1">Preprint</span>}
@@ -103,18 +111,6 @@ export default function Publications() {
                         </span>
                     ))}
                   </div>
-                </div>
-                <div className="flex-shrink-0 ml-2">
-                  <a 
-                    href={publication.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-700 underline inline-flex items-center text-lg"
-                    aria-label={`Link to ${publication.title}`}
-                  >
-                    {publication.title}
-                    <i className="fas fa-external-link-alt ml-1.5 text-xs"></i>
-                  </a>
                 </div>
               </div>
             </motion.div>
