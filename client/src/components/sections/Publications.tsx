@@ -110,9 +110,9 @@ export default function Publications() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-500 hover:text-blue-700 underline inline-flex items-center text-lg"
-                    aria-label={`Link to paper: ${publication.title}`}
+                    aria-label={`Link to ${publication.title}`}
                   >
-                    Link
+                    {publication.title}
                     <i className="fas fa-external-link-alt ml-1.5 text-xs"></i>
                   </a>
                 </div>
