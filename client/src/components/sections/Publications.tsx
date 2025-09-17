@@ -92,7 +92,7 @@ export default function Publications() {
                       href={publication.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-slate-800 hover:text-blue-600 transition-colors"
+                      className="text-blue-500 hover:text-blue-700 transition-colors"
                       aria-label={`Link to ${publication.title}`}
                     >
                       {publication.title}
