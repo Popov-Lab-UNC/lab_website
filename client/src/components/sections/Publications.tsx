@@ -92,7 +92,7 @@ export default function Publications() {
                       href={publication.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:text-blue-700 transition-colors"
+                      className="text-blue-600 hover:text-blue-800 transition-colors"
                       aria-label={`Link to ${publication.title}`}
                     >
                       {publication.title}
@@ -117,7 +117,7 @@ export default function Publications() {
           ))}
           
           <div className="text-center mt-10">
-            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-500 hover:text-blue-700 underline text-lg font-medium" aria-label="View all publications on Google Scholar">
+            <a href="https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-blue-600 hover:text-blue-800 underline text-lg font-medium" aria-label="View all publications on Google Scholar">
               View All Publications
               <i className="fas fa-arrow-right ml-2"></i>
             </a>

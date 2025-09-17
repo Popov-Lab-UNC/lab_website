@@ -93,7 +93,7 @@ export default function Footer() {
               </div>
             </form>
             <p className="text-sm">
-              By subscribing, you agree to our <a href="#" className="text-[#0062CC] hover:underline">Privacy Policy</a>.
+              By subscribing, you agree to our <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">Privacy Policy</a>.
             </p>
           </div>
           */}

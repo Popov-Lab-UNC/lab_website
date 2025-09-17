@@ -95,7 +95,7 @@ export default function ResearchAreas() {
                 href={area.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700 underline inline-flex items-center text-lg"
+                className="text-blue-600 hover:text-blue-800 underline inline-flex items-center text-lg"
               >
                 {index === 0 && "HIDDEN GEM paper"}
                 {index === 1 && "DELi Github"}

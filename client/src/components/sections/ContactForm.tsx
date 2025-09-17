@@ -257,7 +257,7 @@ export default function ContactForm() {
                         I agree to the processing of my data according to the {" "}
                         <Dialog open={privacyOpen} onOpenChange={setPrivacyOpen}>
                           <DialogTrigger asChild>
-                            <a href="#" className="text-primary hover:text-primary/80 hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
+                            <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline" onClick={e => { e.preventDefault(); setPrivacyOpen(true); }}>Privacy Policy</a>
                           </DialogTrigger>
                           <DialogContent className="max-w-6xl max-h-[95vh] w-[95vw]">
                             <DialogTitle className="text-2xl font-bold text-slate-900 mb-4">Privacy Policy</DialogTitle>
