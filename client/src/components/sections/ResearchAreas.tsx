@@ -83,8 +83,8 @@ export default function ResearchAreas() {
               className="bg-slate-50 rounded-xl p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 duration-300 group"
               variants={item}
             >
-              <div className={`w-14 h-14 rounded-full ${colorMap[area.color].bg} flex items-center justify-center mb-6`}>
-                <FontAwesomeIcon icon={iconMap[area.icon]} className={colorMap[area.color].text} />
+              <div className={`w-14 h-14 rounded-full ${colorMap[area.color as keyof typeof colorMap].bg} flex items-center justify-center mb-6`}>
+                <FontAwesomeIcon icon={iconMap[area.icon as keyof typeof iconMap]} className={colorMap[area.color as keyof typeof colorMap].text} />
                 {/*<i className={`fas fa-${area.icon} ${colorMap[area.color].text} text-xl`}></i>*/}
               </div>
               <h3 className="font-['Space_Grotesk'] font-semibold text-xl text-slate-800 mb-3">{area.title}</h3>
