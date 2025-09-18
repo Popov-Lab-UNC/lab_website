@@ -32,5 +32,25 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    // Optimize for memory usage
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-avatar'],
+        },
+      },
+    },
+    // Reduce memory usage during build
+    minify: 'esbuild', // Use esbuild minifier (faster and less memory intensive)
+    // Alternative: use terser for better compression (requires terser dependency)
+    // minify: 'terser',
+    // terserOptions: {
+    //   compress: {
+    //     drop_console: true,
+    //     drop_debugger: true,
+    //   },
+    // },
   },
 });
