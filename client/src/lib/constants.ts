@@ -44,16 +44,6 @@ export const teamMembers = [
     googlescholar: "https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ"
   },
   {
-    name: "James Wellnitz, PhD",
-    role: "Advisor/Alumni",
-    bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
-    image: "/images/jwellnitz.webp",
-    color: "secondary",
-    github: "https://github.com/jimmyjbling",
-    linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150",
-    googlescholar: "https://scholar.google.com/citations?user=ZhselLIAAAAJ&hl=en"
-  },
-  {
     name: "Brandon Novy",
     role: "PhD Candidate",
     bio: "An ex-wet-lab-scientist, Brandon combines rigorous scientific acumen with approachable warmth, excelling as both a critical thinker and a collaborator who dives deep into research. He has an unusually large appreciation for WWE (WHOO!) and coffee.",
@@ -109,6 +99,16 @@ export const teamMembers = [
     bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
     image: "/images/liualex.webp",
     color: "secondary"
+  },
+  {
+    name: "James Wellnitz, PhD",
+    role: "Alumni",
+    bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
+    image: "/images/jwellnitz.webp",
+    color: "secondary",
+    github: "https://github.com/jimmyjbling",
+    linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150",
+    googlescholar: "https://scholar.google.com/citations?user=ZhselLIAAAAJ&hl=en"
   }
 ];
 
