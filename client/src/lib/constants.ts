@@ -79,6 +79,15 @@ export const teamMembers = [
     linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
   },
   {
+    name: "Rishabh Dey",
+    role: "Research Assistant",
+    bio: "Rishabh is a senior dual-majoring in Neuroscience and Computer Science. His research focuses on computational chemistry and AI. In his free time, he plays video games, go on hikes, and woodworks.",
+    image: "/images/rdey.webp",
+    color: "secondary",
+    linkedin: "https://www.linkedin.com/in/rishabhdey/",
+    github: "https://github.com/RishabhDey"
+  },
+  {
     name: "Julia Zhu",
     role: "Research Assistant",
     bio: "Julia is a junior majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
