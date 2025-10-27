@@ -41,6 +41,7 @@ export const teamMembers = [
     image: "/images/kpopov.webp",
     color: "primary",
     github: "",
+    linkedin: "https://www.linkedin.com/in/konstantin-popov-5168b025/",
     googlescholar: "https://scholar.google.com/citations?hl=en&user=hzCErdwAAAAJ"
   },
   {
@@ -215,7 +216,7 @@ export const interestAreas = [
 
 // Social Media Links
 export const socialLinks = [
-  { platform: "linkedin", url: "https://www.linkedin.com/in/konstantin-popov-profile", icon: "linkedin-in" },
+  { platform: "linkedin", url: "https://www.linkedin.com/in/konstantin-popov-5168b025/", icon: "linkedin-in" },
   { platform: "github", url: "https://github.com/Popov-Lab-UNC", icon: "github" },
   { platform: "university", url: "https://tarheels.live/popovlab", icon: "university" },
 ];
