@@ -1,23 +1,24 @@
 [build]
-  command = "npm run build"
-  publish = "dist/public"
+  command = "npm run build"
+  publish = "dist/public"
 
 # SPA fallback so deep links work
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 # Ensure correct content type for sitemap
 [[headers]]
-  for = "/sitemap.xml"
-  [headers.values]
-    Content-Type = "application/xml; charset=utf-8"
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
 
 # Cache policy for static assets (optional)
 [[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 
-
+[[plugins]]
+package = "@netlify/plugin-sitemap"
