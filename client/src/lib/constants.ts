@@ -113,12 +113,29 @@ export const teamMembers = [
   {
     name: "James Wellnitz, PhD",
     role: "Alumni",
-    bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so.",
+    bio: "A seasoned cheminformatician in both academia and industry, James is pragmatic and analytical, evaluating projects through a lens of scientific merit and real-world applicability. Despite his jaded exterior, he maintains a collaborative spirit and an infectious laugh. He loves frogs, and will let you know so. He is now an Advisor of Frontier AI at Eli Lilly.",
     image: "/images/jwellnitz.webp",
     color: "secondary",
     github: "https://github.com/jimmyjbling",
     linkedin: "https://www.linkedin.com/in/james-wellnitz-3168b0150",
     googlescholar: "https://scholar.google.com/citations?user=ZhselLIAAAAJ&hl=en"
+  },
+  {
+    name: "Travis Maxfield",
+    role: "Alumni",
+    bio: "Travis worked on machine learning models and methods in computational chemistry with an emphasis on adapting natural language processing and geometrical deep learning methods. He is now a Lead AI/ML Scientist at Optum.",
+    image: "/images/travis.webp",
+    color: "secondary",
+    github: "https://github.com/travismaxfield",
+    linkedin: "https://scholar.google.com/citations?user=K7MBk9YAAAAJ&hl=en",
+  },
+  {
+    name: "Devan Shell",
+    role: "Alumni",
+    bio: "Devan worked on DNA-encoded libraries and their application in methyl lysine reader proteins. He is now a Lab Informatics Analyst at Karchem Consulting.",
+    image: "/images/devan.webp",
+    color: "secondary",
+    linkedin: "https://www.linkedin.com/in/devan-shell-phd/"
   }
 ];
 
