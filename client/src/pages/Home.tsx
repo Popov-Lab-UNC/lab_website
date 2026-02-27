@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import ResearchAreas from "@/components/sections/ResearchAreas";
+import NewsSection from "@/components/sections/NewsSection";
 import TeamMembers from "@/components/sections/TeamMembers";
 import Publications from "@/components/sections/Publications";
 //import ProcessVisualization from "@/components/sections/ProcessVisualization";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <ResearchAreas />
+        <NewsSection />
         <TeamMembers />
         <Publications />
         <ContactForm />
