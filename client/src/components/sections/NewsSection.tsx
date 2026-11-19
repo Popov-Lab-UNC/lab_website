@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const newsItems = [
     {
+        title: "Leading the next era of AI-enabled drug discovery",
+        link: "https://www.unc.edu/posts/2026/11/18/leading-the-next-era-of-ai-enabled-drug-discovery/",
+        image: "https://www.unc.edu/wp-content/uploads/2026/11/018326_eshelman_sop_ai_drug_discovery_0011-scaled.jpg",
+        date: "November 18, 2026"
+    },
+    {
         title: "School advancing AI-driven drug discovery for Alzheimer's disease",
         link: "https://pharmacy.unc.edu/2026/02/18/school-advancing-ai-driven-drug-discovery-for-alzheimers-disease/",
         image: "https://pharmacy.unc.edu/wp-content/uploads/sites/1424/2026/02/AI-grant-research-team-1024x683.png",
@@ -48,7 +54,7 @@ export default function NewsSection() {
                 </motion.div>
 
                 <motion.div
-                    className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
                     variants={container}
                     initial="hidden"
                     whileInView="show"

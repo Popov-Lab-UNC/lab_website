@@ -65,23 +65,8 @@ export const teamMembers = [
     googlescholar: "https://scholar.google.com/citations?user=6nz2p08AAAAJ&hl=en"
   },
   {
-    name: "Spencer Thompson",
-    role: "Research Assistant",
-    bio: "Spencer graduated from UNC in 2023 with a BS in Biochemistry and minors in Biology and Neuroscience. He works full-time at the UNC BRIC Small Animal Imaging Facility and volunteers his efforts at BIND. He is interested in developing novel ligands for targeted radiopharmaceutal imaging and therapy. He also enjoys fishing, going to the gym, and long walks on the beach.",
-    image: "/images/thompson.webp",
-    color: "secondary",
-  },
-  {
-    name: "Ruthvika Kosuri",
-    role: "Research Assistant",
-    bio: "Ruthvika is a first-year Master's student studying Computer Science. She has a strong interest in cancer research and drug discovery. In her free time, she enjoys drawing, painting, and baking.",
-    image: "/images/rkosuri.webp",
-    color: "secondary",
-    linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
-  },
-  {
     name: "Rishabh Dey",
-    role: "Research Assistant",
+    role: "Postbac Research Assistant",
     bio: "Rishabh is a senior dual-majoring in Neuroscience and Computer Science. His research focuses on computational chemistry and AI. In his free time, he plays video games, go on hikes, and woodworks.",
     image: "/images/rdey.webp",
     color: "secondary",
@@ -93,21 +78,6 @@ export const teamMembers = [
     role: "Research Assistant",
     bio: "Julia is a junior majoring in Biochemistry and Mathematics with a minor in Pharmaceutical Sciences. She is interested in applying MD simulations to explore structure-based drug design. Outside the lab, she enjoys playing volleyball, swimming, and forcing her two (very patient) cats to sit through movie nights, whether they like it or not.",
     image: "/images/jiaz.webp",
-    color: "secondary"
-  },
-  {
-    name: "Adam Gramlich",
-    role: "Research Assistant",
-    bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in chemistry, specifically drug discovery and applications. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
-    image: "/images/agramlic.webp",
-    color: "secondary",
-    linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
-  },
-  {
-    name: "Zengpeng (Alex) Liu",
-    role: "Research Assistant",
-    bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
-    image: "/images/liualex.webp",
     color: "secondary"
   },
   {
@@ -139,18 +109,86 @@ export const teamMembers = [
   }
 ];
 
+/*
+// Deprecated team members
+export const deprecatedMembers = [
+  {
+    name: "Spencer Thompson",
+    role: "Research Assistant",
+    bio: "Spencer graduated from UNC in 2023 with a BS in Biochemistry and minors in Biology and Neuroscience. He works full-time at the UNC BRIC Small Animal Imaging Facility and volunteers his efforts at BIND. He is interested in developing novel ligands for targeted radiopharmaceutal imaging and therapy. He also enjoys fishing, going to the gym, and long walks on the beach.",
+    image: "/images/thompson.webp",
+    color: "secondary",
+  },
+  {
+    name: "Ruthvika Kosuri",
+    role: "Research Assistant",
+    bio: "Ruthvika is a first-year Master's student studying Computer Science. She has a strong interest in cancer research and drug discovery. In her free time, she enjoys drawing, painting, and baking.",
+    image: "/images/rkosuri.webp",
+    color: "secondary",
+    linkedin: "https://www.linkedin.com/in/ruthvika-kosuri/"
+  },
+  {
+    name: "Adam Gramlich",
+    role: "Research Assistant",
+    bio: "Adam is a sophomore from Phoenix majoring in Chemistry (Biochemistry track) and Mathematics. He joined the lab in early 2025 to pursue research in chemistry, specifically drug discovery and applications. Outside the lab, he enjoys Carolina sports, exploring new food spots, and scenic campus walks.",
+    image: "/images/agramlic.webp",
+    color: "secondary",
+    linkedin: "https://www.linkedin.com/in/adam-gramlich-040b74217"
+  },
+  {
+    name: "Zengpeng (Alex) Liu",
+    role: "Research Assistant",
+    bio: "Alex is a sophomore majoring in Biology. His research focuses on computational biology and the application of machine learning in drug discovery. He is currently working on molecular docking and protein-ligand interaction modeling, with a focus on membrane protein targets.",
+    image: "/images/liualex.webp",
+    color: "secondary"
+  },
+];
+*/
+
 // Publications
 export const publications = [
   {
-    title: "Open-Source DNA-Encoded Library Package for Design, Decoding and Analysis: DELi",
-    authors: "Wellnitz J, Novy B, Maxfield T, Zhilinskaya I, Lin SH, Axtman M, Leisner T, Norris-Drouin JL, Hardy BP, Pearce KH, Popov KI.",
-    journal: "BioRxiv",
-    year: "2025",
+    title: "Open-source DNA-encoded library informatics package for design, decoding, and analysis: DELi",
+    authors: "Wellnitz J, Novy B, Lin SH, Maxfield T, Axtman M, Leisner TM, Merten EM, Zhilinskaya I, Shell DJ, Schroeder KM, Norris-Drouin JL, Hardy PB, Pearce KH, Popov KI.",
+    journal: "Journal of Cheminformatics",
+    year: "2026",
     tags: ["DEL Technology", "Tool Development"],
-    link: "https://www.biorxiv.org/content/10.1101/2025.02.25.640184v2",
-    doi: "10.1101/2025.02.25.640184v2",
+    link: "https://link.springer.com/article/10.1186/s13321-026-01296-1",
+    doi: "10.1186/s13321-026-01296-1",
+  },
+  {
+    title: "Expansion of DNA-Encoded Library Hits Using Generative Chemistry and Ultra-Large Compound Catalogs",
+    authors: "Novy BC, Lin SHJ, Shell D, Maxfield T, Merten EM, Zhilinskaya I, Wellnitz J, Guduru SKR, Hardy B, Pearce KH, Popov KI.",
+    journal: "BioRxiv",
+    year: "2026",
+    tags: ["Virtual Screening", "Collaborative Drug Discovery"],
+    link: "https://www.biorxiv.org/content/10.1101/2025.09.30.679600v2",
+    doi: "10.1101/2025.09.30.679600v2",
     isPreprint: true,
   },
+  {
+    title: "PHENOMS: Open-Source Software for Rust-Accelerated Hydrogen-Bond Analysis in Molecular Dynamics Simulations",
+    authors: "Novy B, Lin SH, Dey R, Temple B, Hajicek N, Petrotchenko EV, Borchers CH, Sondek J, Popov KI.",
+    journal: "BioRxiv",
+    year: "2026",
+    tags: ["Tool Development"],
+    link: "https://www.biorxiv.org/content/10.64898/2026.10.26.761768v1",
+    doi: "10.64898/2026.10.26.761768v1",
+    isPreprint: true,
+  },
+  {
+    title: "HIt Discovery using docking ENriched by GEnerative Modeling (HIDDEN GEM): A novel computational workflow for accelerated virtual screening of ultra-large chemical libraries",
+    authors: "Popov KI, Wellnitz J, Maxfield T, Tropsha A.",
+    journal: "Molecular Informatics",
+    year: "2023",
+    tags: ["Tool Development", "Virtual Screening"],
+    link: "https://onlinelibrary.wiley.com/doi/10.1002/minf.202300207",
+    doi: "10.1002/minf.202300207",
+  },
+];
+
+/*
+// Past publications
   {
     title: "Development of a Second-Generation, In Vivo Chemical Probe for PIKfyve",
     authors: "Min SM, Bashore FM, Smith JL, Havener TM, Howell S, Li H, Couñago RM, Popov KI, Axtman AD.",
@@ -170,18 +208,6 @@ export const publications = [
     doi: "10.1073/pnas.2409166121",
   },
   {
-    title: "HIt Discovery using docking ENriched by GEnerative Modeling (HIDDEN GEM): A novel computational workflow for accelerated virtual screening of ultra-large chemical libraries",
-    authors: "Popov KI, Wellnitz J, Maxfield T, Tropsha A.",
-    journal: "Molecular Informatics",
-    year: "2023",
-    tags: ["Tool Development", "Virtual Screening"],
-    link: "https://onlinelibrary.wiley.com/doi/10.1002/minf.202300207",
-    doi: "10.1002/minf.202300207",
-  },
-];
-
-{/*
-    {
     title: "An Improved Metric and Benchmark for Assessing the Performance of Virtual Screening Models",
     authors: "Brocidiacono M, Popov KI, Tropsha A.",
     journal: "ArXiv",
@@ -210,7 +236,7 @@ export const publications = [
     link: "https://www.mdpi.com/1424-8247/17/3/306",
     doi: "10.3390/ph17030306",
   },
-*/}
+*/
 
 // Contact Info
 export const contactInfo = {
